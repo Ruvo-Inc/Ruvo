@@ -1,0 +1,5 @@
+.text-stroke{
+-webkit-text-stroke: 8px #FFFFFF;
+font-weight: 900 !important;
+text-shadow: 0 4px 4px rgba(0,0,0,0.1);
+} 
