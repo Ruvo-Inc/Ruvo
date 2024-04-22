@@ -13,7 +13,7 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <>
-<Element tag="section" className='relative w-full overflow-hidden'>
+<Element tag="section" className='relative w-full overflow-hidden a'>
 <Image src={Banner.src}  alt="hero-image" width={Banner.width} height={Banner.height} className='object-cover max-smlg:min-h-[90vh]' data-aos="zoom-out" data-aos-duration="800" />
 <Wrapper className='absolute top-[223px] left-1/2 max-md:px-5  translate-x-[-50%] flex flex-col gap-[30px] max-sm:gap-[20px] z-[2] max-4xl:w-full max-xl:top-[25%]'>
   <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
