@@ -163,7 +163,7 @@ export function Card({ postion, index, heading, text, type }) {
                     `${type === "rider" ? " bg-rider" : ""} ${
                       type === "driver" ? " bg-driver" : ""
                     }  ${type === "blank" ? " bg-primary " : ""}` +
-                    "text-white bg-rider rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
+                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
                   }
                 >
                   {type}
