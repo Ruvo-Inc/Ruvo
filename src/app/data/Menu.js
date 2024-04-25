@@ -10,10 +10,6 @@ export const headerNav = [
       label: "Home"
     },
     {
-      link: "/pages/homepage-2",
-      label: "Home 2"
-    },
-    {
       link: "/pages/why-ruvo",
       label: "Why Ruvo"
     },
@@ -28,19 +24,7 @@ export const headerNav = [
     {
       link: "/pages/about-us",
       label: "About Us"
-    },
-    {
-      link: "/pages/investor-information",
-      label: "Investor Information"
-    },
-    {
-      link: "/pages/press-and-media",
-      label: "Press & Media"
-    },
-    {
-      link: "/pages/blogs",
-      label: "Blog"
-    }
+    }    
 ];
 
 export const footerMenu1 = [  
@@ -69,7 +53,12 @@ export const footerMenu1 = [
 
 
 export const footerMenu2 = [  
-{
+  
+  {
+    link: "/pages/investor-information",
+    label: "Investor Information"
+  },
+  {
   link: "/pages/press-and-media",
   label: "Press & Media"
 },

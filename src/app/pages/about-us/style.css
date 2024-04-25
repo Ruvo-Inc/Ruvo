@@ -1,0 +1,27 @@
+.the-text-animation span{
+    opacity: 0.1;
+    transition: 0.5s;
+}
+.the-text-animation .active-op{
+    opacity: 1;
+}
+
+.makes-text-about *:not(.number){
+    @apply opacity-10 transition-all duration-300;
+}
+.enter.makes-text-about  .number{
+    @apply text-white bg-c-green-600;
+}
+.enter.makes-text-about *:not(.number){
+    opacity: 1;
+}
+.makes-text-about .number{
+    @apply text-c-gray-600 border border-c-gray-400 bg-c-salmon-100 transition-all duration-300;
+}
+.theBar-about{
+    transform-origin: top;
+}
+.about-bg{
+    background-image: url(../../assets/images//About/aboutusbg.png);
+    background-size: cover;
+}

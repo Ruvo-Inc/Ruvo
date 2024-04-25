@@ -1,15 +1,17 @@
 "use client"
+import './style.css'
 import Element from '@/app/components/UI/Element/Element';
 import Wrapper from '@/app/components/UI/Wrapper/Wrapper';
 import Logo from '@/app/components/UI/SiteLogo/Logo';
 import Button from '@/app/components/Form/Button/Button';
 import Navigation from '@/app/components/UI/Navigation/Navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Icon from '@/app/components/UI/Icons/Icon';
 import { headerNav } from '@/app/data/Menu';
-import './style.css'
 import { usePathname } from 'next/navigation';
-
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
     const pathname = usePathname();
@@ -24,8 +26,33 @@ const Header = () => {
     const menuClose = ()=>{
         setOpen(false);
     }
+useEffect(()=>{
+    const panels = gsap.utils.toArray(".site-header");
+    panels.forEach((panel, index) => {
+        const op3 = gsap.timeline({
+          scrollTrigger: {
+            trigger: panel,
+            start: "20px top",
+            end: "100% center",
+            scrub: 1,
+            markers: false,
+            onEnter: ({ progress, direction, isActive }) => {
+              panel.classList.add("bg-primary");
+              panel.classList.add("py-6");
+            },
+            onLeaveBack: ({ progress, direction, isActive }) => {
+              panel.classList.remove("bg-primary");
+              panel.classList.remove("py-6");
+            }
+          }
+        });
+      });
+},[])
+const close = ()=>{
+  setOpen(false)
+}
     return (
-    <Element tag="header" className={`flex items-center justify-between p-[30px] max-sm:p-[20px] absolute top-0 left-0 w-full z-[9]`}>
+    <Element tag="header" className={`site-header flex items-center justify-between py-[45px] px-[60px] max-sm:p-[20px] fixed top-0 left-0 w-full z-[999] transition-all  duration-500`}>
             <Wrapper className="max-w-[162.16px] max-xl:max-w-[130.16px]">
             <Logo mode={mode}/>
             </Wrapper>
@@ -35,7 +62,7 @@ const Header = () => {
                     <Icon size="24px" type="close" colorClass='fill-c-gray-600' />
                 </Button>
                 </Wrapper>
-            <Navigation linkList={headerNav} style='hoz' mode={mode}>
+            <Navigation linkList={headerNav} style='hoz' mode={mode} close={close}>
 
             </Navigation>
             </Wrapper>

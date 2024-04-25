@@ -1,0 +1,6 @@
+.hero-clip{
+    clip-path: inset(0);
+}
+.animated-y.aos-animate,[data-aos^=fade][data-aos^=fade].aos-animate.animated-y{
+    transform: translateZ(0) translateY(-50%);
+}

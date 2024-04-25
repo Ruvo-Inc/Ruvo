@@ -34,7 +34,20 @@ module.exports = {
         'max-smlg': {'max':'990px'},     
         'max-md': {'max':'768px'},   
         'max-sm': {'max':'640px'},     
-        'max-xs': {'max':'374px'} 
+        'max-xs': {'max':'374px'} ,
+        'min-5xl': {'min':'1921px'},
+        'min-4xl': {'min':'1897px'},
+        'min-4xlsm': {'min':'1737px'},
+        'min-3xlsm': {'min':'1661px'},
+        'min-3xl': {'min':'1537px'},
+        'min-2xl': {'min':'1441px'},
+        'min-xl': {'min':'1281px'},
+        'min-tab':{'min':'1025px'},
+        'min-lg': {'min':'1025px'},
+        'min-smlg': {'min':'991px'},     
+        'min-md': {'min':'769px'},   
+        'min-sm': {'min':'641px'},     
+        'min-xs': {'min':'375px'} 
       },
       colors:{
         "c-green-600":"#155C27",
@@ -45,8 +58,18 @@ module.exports = {
         'c-salmon-500':"#E56655",
         'c-purple-100':"#FEFCFF",
         'c-gray-400':"#959A99",
+        'c-green-100':'#F7FFF0',
         'c-teal-600':"#045B50",    
-        'c-teal-500':"#009A75"    
+        'c-teal-500':"#009A75",
+        'primary':"#155C27",
+        'secondary':"#155C27",
+        'rider':"#066DBE",
+        'driver':"#8220A6", 
+        'accent':"#1F9A00",
+        'partner':"#9B51E0"
+
+        
+            
         
       },
       fontFamily:{
