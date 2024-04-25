@@ -5,7 +5,7 @@ import Heading from '../../components/UI/Heading/Heading';
 import Hero from '../../components/UI/Hero/Hero';
 import ImageText from "@/app/components/UI/reusable-components/ImageText";
 import ImageCar from '@/app/assets/images/Inverstor/car.png'
-import ImageStock from '@/app/assets/images/Inverstor/ImageStock.png'
+import ImageStock from '@/app/assets/images/Inverstor/imageStock.png'
 import ImageIstock from '@/app/assets/images/Inverstor/imageIstock.png'
 import Text from "@/app/components/UI/Text/Text";
 import ContactForm from "@/app/components/Form/ContactForm/ContactForm";
