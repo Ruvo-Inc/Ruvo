@@ -62,7 +62,7 @@ const HowRuvoWorks = () => {
     How Ruvo works
   </Heading>
   <Wrapper className="the-trigger-point relative overflow-hidden mt-[47px] max-md:mt-[0px]">
-    <div className="w-[1px] bg-c-gray-400 left-1/2 translate-x-[-50%] absolute theBar top-[30px] h-0 " ref={bar}></div>
+    <div className="w-[1px] bg-c-gray-400 left-1/2 translate-x-[-50%] absolute theBar top-[30px] max-md:top-[40px] h-0 " ref={bar}></div>
 
     <Card
       postion="right"
