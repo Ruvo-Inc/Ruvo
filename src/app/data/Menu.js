@@ -10,15 +10,15 @@ export const headerNav = [
       label: "Home"
     },
     {
-      link: "/pages/why-ruvo",
+      link: "#",
       label: "Why Ruvo"
     },
     {
-      link: "/pages/how-ruvo-works",
+      link: "#",
       label: "How Ruvo Works"
     },
     {
-      link: "/pages/sustainability",
+      link: "#",
       label: "Sustainability"
     },
     {
@@ -30,11 +30,11 @@ export const headerNav = [
 export const footerMenu1 = [  
  
   {
-    link: "/pages/why-ruvo",
+    link: "#",
     label: "Why Ruvo"
   },
   {
-    link: "/pages/how-ruvo-works",
+    link: "#",
     label: "How Ruvo Works"
   },
   {
@@ -42,11 +42,11 @@ export const footerMenu1 = [
     label: "About Us"
   },
   {
-    link: "/pages/sustainability",
+    link: "#",
     label: "Sustainability"
   },
   {
-    link: "/pages/blogs",
+    link: "#",
     label: "Blog"
   }        
 ];
@@ -55,23 +55,23 @@ export const footerMenu1 = [
 export const footerMenu2 = [  
   
   {
-    link: "/pages/investor-information",
+    link: "#",
     label: "Investor Information"
   },
   {
-  link: "/pages/press-and-media",
+  link: "#",
   label: "Press & Media"
 },
 {
-  link: "/pages/leagal#ref",
+  link: "#",
   label: "Terms & Conditions"
 },
 {
-  link: "/pages/leagal#privacy-policy",
+  link: "#",
   label: "Privacy Policy"
 },
 {
-  link: "/pages/leagal#regulatory-information",
+  link: "#",
   label: "Regulatory Information"
 }              
 ];

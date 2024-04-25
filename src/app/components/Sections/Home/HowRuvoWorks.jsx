@@ -69,21 +69,21 @@ const HowRuvoWorks = () => {
       heading="Select your Destination"
       text="You can schedule rides without fees"
       index={1}
-      type="guest"
+      type="rider"
     />
     <Card
       postion="left"
-      heading="Select a Partner"
+      heading="Select a driver"
       text="You have a choice"
       index={2}
-      type="guest"
+      type="rider"
     />
     <Card
       postion="right"
-      heading="Select a Partner"
+      heading="Select a driver"
       text="You have a choice"
       index={3}
-      type="partner"
+      type="driver"
     />
     <Card
       postion="left"
@@ -97,14 +97,14 @@ const HowRuvoWorks = () => {
       heading="Arrive at the destination"
       text="Notify us when the trip has ended"
       index={5}
-      type="guest"
+      type="driver"
     />
     <Card
       postion="left"
       heading="Save your preferences"
-      text="Build your partner list to reference on future rides"
+      text="Build your driver list to reference on future rides"
       index={6}
-      type="guest"
+      type="rider"
     />
     <Card
       postion="right"
@@ -140,10 +140,10 @@ export function Card({ postion, index, heading, text, type }) {
               className={
                 `${postion === "left" ? " right-[-83px]" : " left-[-83px]"}` +
                 `${type === "blank" ? " top-[0]" : " top-[0px]"}` +                
-                `${type === "guest" ? " bg-rider" : ""} ${
-                  type === "partner" ? " bg-partner" : ""
+                `${type === "rider" ? " bg-rider" : ""} ${
+                  type === "driver" ? " bg-driver" : ""
                 } ${
-                  type === "both" ? " bg-rider border-[5px] border-partner" : ""
+                  type === "both" ? " bg-rider border-[5px] border-driver" : ""
                 } ${type === "blank" ? " bg-primary " : ""}` +
                 " max-md:static max-md:mb-3 max-md:mx-auto number  text-white absolute  text-[20px] font-medium font-Mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[16px]"
               }
@@ -160,8 +160,8 @@ export function Card({ postion, index, heading, text, type }) {
                 <Heading
                   headingStyle="empty"
                   className={
-                    `${type === "guest" ? " bg-rider" : ""} ${
-                      type === "partner" ? " bg-partner" : ""
+                    `${type === "rider" ? " bg-rider" : ""} ${
+                      type === "driver" ? " bg-driver" : ""
                     }  ${type === "blank" ? " bg-primary " : ""}` +
                     "text-white bg-rider rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
                   }
@@ -179,16 +179,16 @@ export function Card({ postion, index, heading, text, type }) {
                       "text-white  rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
                     }
                   >
-                    Guest
+                    rider
                   </Heading>
                   <Heading
                     headingStyle="empty"
                     className={
-                      `bg-partner ` +
+                      `bg-driver ` +
                       "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
                     }
                   >
-                    Partner
+                    driver
                   </Heading>
                 </Wrapper>
               )}

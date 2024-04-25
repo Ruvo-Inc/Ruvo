@@ -13,14 +13,14 @@ export default function HomePage() {
   return (
     <>
     <div data-aos="zoom-out" data-aos-duration="800" >
-<Element tag="section" className='relative w-full overflow-hidden home-hero pt-[23.12500vw] pb-[19.0104167vw] max-sm:py-[50vw] '>
+<Element tag="section" className='relative w-full overflow-hidden home-hero py-[23.12500vw] pb-[19.0104167vw] max-sm:py-[50vw] '>
  
   <Wrapper className=' min-5xl:max-w-[1200px] max-w-[32.5vw] max-sm:max-w-[86vw] mx-auto max-smlg:max-w-[40.5vw]'>
-  <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" className='mix-blend-difference'>
+  <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" className='min-sm:mix-blend-difference'>
     <Logo mode='light'/>
     </div>
   <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
-  <Heading headingStyle='h6Class' className='!text-white mt-6  max-smlg:whitespace-normal whitespace-nowrap home-banner-heading max-xl:text-[30px]'>
+  <Heading headingStyle='h6Class' className='!text-white mt-6 text-center  max-smlg:whitespace-normal whitespace-nowrap home-banner-heading max-xl:text-[30px]'>
   RIDE THE CHANGE
   </Heading>
   </div>
@@ -37,10 +37,10 @@ export default function HomePage() {
 
     <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] mt-[35px]">
       <NavButton link='/' color='green' type='solid' >
-      Be a Partner
+      Drive With Us
       </NavButton>
       <NavButton link='/' color='green' type='solid' >
-       Be our Guest
+       Ride with Us
       </NavButton>
     </Wrapper>
   </Wrapper>
