@@ -81,12 +81,23 @@ export default function HomePage() {
         </Heading>
 
         <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] max-sm:gap-x-[15px]">
-          <NavButton link="/" color="green" type="solid">
-            Drive With Us
-          </NavButton>
-          <NavButton link="/" color="green" type="solid">
-             Ride with Us
-          </NavButton>
+        <Button
+                  event={getApply}
+                  color="green"
+                  btnType="solid"
+                  type="button"
+                  label=" Drive With Us"
+                  additionalCss='max-sm:!px-0'
+                />
+                <Button
+                  event={getApply}
+                  color="green"
+                  additionalCss='max-sm:!px-0'
+                  btnType="solid"
+                  type="button"
+                  label="  Ride with Us"
+                />
+         
         </Wrapper>
       </Wrapper>
       <WhyRuvo />

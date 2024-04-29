@@ -10,8 +10,18 @@ export const headerNav = [
       label: "Home"
     },
     {
-      link: "/pages/why-ruvo",
-      label: "Why Ruvo"
+      link: "#",
+      label: "Why Ruvo",
+      child:[
+        {
+        link: "/pages/why-ride-with-ruvo",
+        label: "Rider"
+        },
+        {
+          link: "/pages/why-drive-with-ruvo",
+          label: "Driver"
+          }
+      ]
     },
     {
       link: "/pages/sustainability",
@@ -26,9 +36,13 @@ export const headerNav = [
 export const footerMenu1 = [  
  
   {
-    link: "/pages/why-ruvo",
-    label: "Why Ruvo"
-  },
+    link: "/pages/why-ride-with-ruvo",
+    label: "Rider"
+    },
+    {
+      link: "/pages/why-drive-with-ruvo",
+      label: "Driver"
+      },
   {
     link: "/pages/about-us",
     label: "About Us"
@@ -208,3 +222,46 @@ export const whyRide = [
     text: "When you ride with Ruvo, you join a community of like-minded individuals who believe in better, more sustainable urban living. Together, we’re not just passengers and drivers—we’re pioneers shaping the future of transportation. Ready to ride the change? Sign up now and take your first step towards a smarter, cleaner commute."
   }
 ]
+
+export const whyDrive = [
+  {
+    heading: 'Maximize Your Earnings with Zero Commission',
+    text: "At Ruvo, enjoy a transparent, commission-free earning model that respects your hard work. Our marketplace allows you to set competitive fares based on demand, not dictates. With Ruvo, what you earn is yours to keep—boost your income without any hidden fees."
+  },
+  {
+    heading: 'Work When You Want, How You Want',
+    text: "Our platform puts you in the driver’s seat—not just of your vehicle but of your schedule. Choose to drive part-time or full-time, and select rides that fit your life and preferences. With Ruvo, you’re in control of your time, ensuring you drive at your convenience."
+  },
+  {
+    heading: 'State-of-the-Art Tools at Your Fingertips',
+    text: "Leverage our AI-driven platform designed to optimize your routes and reduce downtime. Our support goes beyond the road—with Ruvo, you have 24/7 access to assistance and tools that make driving as straightforward as possible. Our technology predicts high-demand areas and times, increasing your rides and revenue. "
+  },
+  {
+    heading: 'Drive Smarter with Cutting-Edge AI',
+    text: "At Ruvo, we understand that deadheading—driving without a passenger—means lost earnings and unnecessary congestion. That’s why our advanced AI algorithms are designed to strategically minimize deadheading. Our technology optimizes your routes in real-time, ensuring you’re positioned to connect quickly with nearby riders. This means less time wasted, reduced fuel costs, and more trips completed per shift. Experience the difference with Ruvo’s smart logistics that keep you moving efficiently, maximizing your earnings with every turn."
+  },
+  {
+    heading: 'Leverage Precision Technology',
+    text: "Our AI doesn’t just respond to the current location of riders—it anticipates demand by analyzing traffic patterns, events, and historical data. This proactive approach places you exactly where the demand is about to surge, not just where it currently is. Stay ahead of the curve and reduce your idle time with technology that works as hard as you do."
+  },
+  {
+    heading: 'Pioneering Sustainable Urban Transport',
+    text: "Driving with Ruvo means you contribute to a greener city. Our commitment to an all-electric fleet reduces urban pollution and positions you as a key player in the global move towards sustainable transportation. By reducing deadheading, you also help decrease overall traffic congestion, making city environments cleaner and more livable."
+  },
+  {
+    heading: 'Join a Community Driving Change',
+    text: "As a Ruvo driver, you’re part of a forward-thinking community that values sustainability and social impact. Our all-electric fleet not only reduces your carbon footprint but also aligns you with a global movement towards environmental responsibility. Drive with us and help shape the future of urban transport."
+  },
+  {
+    heading: 'Get Started in No Time',
+    text: "Signing up to drive with Ruvo is quick and easy. Our streamlined onboarding process gets you on the road faster, so you can start earning. Plus, we provide all the training you need to be successful—from navigating the app to optimizing your earnings."
+  }
+]
+
+ 
+
+
+
+
+
+

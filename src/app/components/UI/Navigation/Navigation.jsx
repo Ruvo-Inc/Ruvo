@@ -22,9 +22,16 @@ import { usePathname } from 'next/navigation';
 
           <ul className={classes}>
           {Object.entries(linkList).map(([key,link]) => (
-       <li key={key} className={ style === 'hoz' ? 'max-tab:border-b max-tab:border-c-gray-400' : ''}>
-        {style === 'hoz' && (<Link onClick={closing} className={customClasses  + "  block  font-mulish font-medium  leading-5 tracking-[0.5px]" + ` ${style === 'hoz' ?  link?.link === router ?  ' border-b-2 border-c-green-600 max-lg:border-0'  :  ''    :  ''} `} href={link?.link}>{link?.label}</Link> )}
+       <li key={key} className={`${style === 'hoz' ? 'relative max-tab:border-b max-tab:border-c-gray-400 group' : ''} ${link?.child ? ' !border-0' : ''}`}>
+        {style === 'hoz' && (<Link onClick={closing} className={customClasses  + "  block  font-mulish font-medium  leading-5 tracking-[0.5px]" + ` ${style === 'hoz' ?  link?.link === router ?  ' border-b-2 border-c-green-600 max-lg:border-0'  :  ''    :  ''} ${link?.child ? ' max-tab:!hidden' : ''}`} href={link?.link}>{link?.label}</Link> )}
         {style !== 'hoz' && (<Link className={customClasses  + "   font-mulish font-medium  leading-5 tracking-[0.5px]" + ` ${style === 'hoz' ?  link?.link === router ?  ' border-b border-white'  :  ''    :  ''} `} href={link?.link}>{link?.label}</Link> )}       
+        {link?.child && (<ul className={`absolute top-full left-0 bg-white opacity-0 transition-all translate-y-3 invisible  group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 ${mode === 'light' ? 'min-tab:!bg-c-green-600' : ''}  max-tab:static max-tab:visible max-tab:translate-y-0 max-tab:opacity-100 `}>
+          {Object.entries(link?.child).map(([key,childlink]) => (
+            <li key={key} className={ style === 'hoz' ? 'max-tab:border-b max-tab:border-c-gray-400' : ''}>
+           {style === 'hoz' && (<Link className={customClasses  + " whitespace-nowrap  !py-3 px-4 block  font-mulish font-medium  leading-5 tracking-[0.5px]" + ` ${style === 'hoz' ?  childlink?.link === router ?  ' border-b border-white'  :  ''    :  ''} `} href={childlink?.link}>{childlink?.label}</Link> )}   
+           </li>    
+          ))}
+        </ul>)}
         
            </li>      
         ))}

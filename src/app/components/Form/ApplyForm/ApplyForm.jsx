@@ -215,8 +215,8 @@ const ApplyForm = () => {
                 required={true}
               >
                 I have read and agree to the{" "}
-                <Link href="/pages/leagal">Privacy Policy</Link> and{" "}
-                <Link href="/pages/leagal">Terms of Service</Link>.
+                <Link href="/pages/legal#privacy-policy">Privacy Policy</Link> and{" "}
+                <Link href="/pages/legal#terms-conditions">Terms of Service</Link>.
               </Checkbox>
               {formError?.legals && !formData?.legals && (
                 <Text className="text-sm text-red-500 mt-1">

@@ -62,7 +62,7 @@ function AboutUs() {
           {" "}
           About Us
         </Heading>
-        <Text className="text-center text-white text-sm max-w-[676px] mx-auto mt-[10px] text-[22px] leading-[1.5] tracking-[0.5px]">
+        <Text className="text-center text-white max-w-[676px] mx-auto mt-[10px]">
           At Ruvo, our essence and ethos are encapsulated in our name, a
           testament to our commitment and vision for a sustainable future.
           "Ruvo" is not just a label; it's the very heart of our mission,

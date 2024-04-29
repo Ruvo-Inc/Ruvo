@@ -59,7 +59,7 @@ const HowRuvoWorks = () => {
   }, []);
   return (
    
-<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-12 max-md:px-5 the-gradient">
+<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-12 max-md:px-5 bg-white">
   <Heading
     headingStyle="h3Class"
     className="text-primary text-center max-smlg:!text-[24px] !text-[48px]"
