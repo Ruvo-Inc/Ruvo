@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
-import Button from '../../../form/button/Button'
-import Text from '../../text/Text';
-import Wrapper from '../../wrapper/Wrapper';
+import Text from '../../Text/Text';
+import Wrapper from '../../Wrapper/Wrapper';
 import PropTypes from 'prop-types';
 const  Notification = ({children,message, className, active})=> {
     const [activeNoti,setActiveNoti] = useState(false);

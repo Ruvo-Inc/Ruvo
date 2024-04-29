@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import Text from '../../text/Text';
+import Text from '../../Text/Text';
 function LoaderNotification({children,message, className, active}) {
     const [activeNoti,setActiveNoti] = useState(false);
     useEffect(()=>{
