@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const Button = ({ children, type, btnType, label, loading, color , loadingText, event, additionalCss}) => {
-    let classes = `${additionalCss}  border font-mulish text-[16px] leading-none font-bold  transition-all duration-300 py-[18px] px-[30px] w-full block text-center uppercase rounded-[10px]`;
+    let classes = `${additionalCss || ''}  border font-mulish text-[16px] leading-none font-bold  transition-all duration-300 py-[18px] px-[30px] w-full block text-center uppercase rounded-[10px] ${loading ? ' opacity-50' : '' }`;
     if (btnType === "solid" && color === 'green') {
         classes += `  text-white bg-c-green-600 border-white`;
     }
@@ -14,7 +14,7 @@ const Button = ({ children, type, btnType, label, loading, color , loadingText, 
         classes += ` text-white border-white`;
     } 
     if (btnType === "nav" && color === 'white') {
-        classes = `${additionalCss} border border-white p-2 rounded-md cursor-pointer`;
+        classes = `${additionalCss || ''} border border-white p-2 rounded-md cursor-pointer`;
     } 
     return (
         <>
@@ -36,13 +36,5 @@ Button.propTypes = {
     label: PropTypes.string,
     loading: PropTypes.bool,
     loadingText:PropTypes.string
-};
-Button.defaultProps = {
-    color: "blue",
-    type: "button",
-    btnType:"solid",
-    loading:false,
-    additionalCss: ' ',
-    loadingText:'Sending...'
 };
 export default Button;

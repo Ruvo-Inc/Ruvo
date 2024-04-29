@@ -15,15 +15,15 @@ function ImageText({image, heading, children, imagePostion, imageClassName}) {
             {!image && (<Image src={Placeholder} alt="Index" className={ imageClassName + " h-full object-cover w-full"} width={Placeholder.width} height={Placeholder.height}  />)}                
             </div>
             <div className='max-smlg:w-full md:w-1/2 flex items-center justify-center '>
-            <Wrapper className='p-[40px] max-smlg:p-[20px] max-smlg:w-full'>
+            <Wrapper className='p-[40px] max-smlg:py-[20px]  max-smlg:px-0 max-smlg:w-full'>
                 <div className='max-smlg:max-w-full md:max-w-[666px] mx-auto'>
-                    <div data-aos="fade-up" data-aos-anchor-placement="center-center">
+          
                     <Heading className='mb-[10px]' headingStyle='h2Class' text={heading ? heading : 'Heading'} />            
-                    </div>
-                    <div data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="200">
-                      <Text>
+              
+                   
+            
                      {children}
-                      </Text>   </div>
+               
                            
                 </div>
                 </Wrapper>  
@@ -34,9 +34,5 @@ function ImageText({image, heading, children, imagePostion, imageClassName}) {
 ImageText.propTypes = {
     imageClassName:PropTypes.string,
     imagePostion:PropTypes.string
-};
-ImageText.defaultProps = {
-    imageClassName: " ",
-    imagePostion:'left'
 };
 export default ImageText;

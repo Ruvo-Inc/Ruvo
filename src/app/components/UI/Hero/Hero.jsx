@@ -9,7 +9,7 @@ const Hero = ({children,img, styles}) => {
     <Wrapper animation='fade-up' delay='500' className='absolute z-[1] top-1/2 left-0 translate-y-[-30%] w-full animated-y px-5'>
     {children}
     </Wrapper>
-    <Image src={img.src} alt="hero-image" className='min-h-[100vh] max-sm:min-h-[100vw] object-cover h-full max-sm:h-[120vw]  fixed top-0 left-0 w-full'  data-aos="zoom-out" data-aos-duration="800" width={img.width} height={img.height}/>
+    <Image src={img.src} alt="hero-image" className='min-h-[100vh] max-sm:min-h-[167vw] object-cover h-full max-sm:h-[120vw]  fixed top-0 left-0 w-full'  data-aos="zoom-out" data-aos-duration="800" width={img.width} height={img.height}/>
    </Element>
   );
 }

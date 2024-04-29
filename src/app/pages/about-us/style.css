@@ -25,3 +25,14 @@
     background-image: url(../../assets/images//About/aboutusbg.png);
     background-size: cover;
 }
+.about-bg-2{
+    background-image: url(../../assets/images//About/iStock-1460170484.webp);
+    background-size: cover;
+}
+.wrapper-div{
+    opacity: 0.2;
+    transition: 0.3s;
+}
+.wrapper-div.active-op{
+    opacity: 1;
+}

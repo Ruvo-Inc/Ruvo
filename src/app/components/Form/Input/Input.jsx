@@ -33,10 +33,4 @@ Input.propTypes = {
     value: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired
 };
-Input.defaultProps = {
-    placeholder: "blue",
-    type: "text",
-    required: false,
-    label: "Email"
-};
 export default Input;

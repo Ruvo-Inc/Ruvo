@@ -13,14 +13,16 @@ import Heading from "@/app/components/UI/Heading/Heading";
 import { FaFacebookF } from "react-icons/fa6";
 import { PiInstagramLogo } from "react-icons/pi"; 
 import Text from "@/app/components/UI/Text/Text";
+import Container from "@/app/components/UI/Container/Container";
  
 const Footer = () => {
   return (
     <Element
       tag="footer"
-      className="bg-c-gray-600 pt-[85px] max-sm:pt-[40px]"
+      className="bg-c-gray-600 pt-12"
     >
-      <Wrapper className=' flex justify-between max-smlg:flex-col max-smlg:gap-4 px-[60px]  pb-[93px] max-sm:pb-[40px] max-sm:px-[20px]'>
+      <Container>
+      <Wrapper className=' flex justify-between max-smlg:flex-col max-smlg:gap-4 pb-12'>
       <Wrapper className="max-w-[162.16px] max-xl:max-w-[130.16px]">
         <Logo mode="light" />
         <Wrapper className="flex gap-x-[15px] mt-24 max-sm:mt-4">
@@ -85,7 +87,9 @@ const Footer = () => {
             info@myruvo.com
           </NavButton>
         </Wrapper>
-      </Wrapper></Wrapper>
+      </Wrapper>
+      </Wrapper>
+      </Container>
       <Wrapper className='border-t border-c-green-100 py-[14px] border-opacity-50'>
       <Text className='text-center text-white text-[14px]'>
       © 2024 RUVO

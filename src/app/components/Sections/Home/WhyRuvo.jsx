@@ -7,16 +7,18 @@ import Affordability from  '@/app/assets/images/Home/Affordability Meets Reliabi
 import Commitment from '@/app/assets/images/Home/Commitment to Zero Carbon Emissions.png'
 import Text from '../../UI/Text/Text';
 import Image from 'next/image';
+import Container from '../../UI/Container/Container';
 const WhyRuvo = () => {
   return (
     <div  id='WhyRuvo'   data-aos="fade-in" data-aos-anchor-placement="top-center">
-      <Wrapper  className='max-smlg:mt-[50px] max-smlg:px-[20px] bg-c-salmon-100 py-[100px] max-lg:py-[50px] max-lg:px-5 px-[50px]'>
-        <div  data-aos="fade-in" data-aos-anchor-placement="top-center">
+      <Wrapper  className=' max-smlg:px-[20px] bg-c-green-100 py-12 max-lg:py-12 max-lg:px-5 px-[50px]'>
+        <div  data-aos="fade-in"  data-aos-anchor='#WhyRuvo'>
           <Heading headingStyle='h2Class' className='text-center mb-[40px]' >
           Why Ruvo stands apart
         </Heading>
         </div>
-        <Wrapper className='flex justify-between gap-[45px] max-smlg:gap-[30px] max-smlg:flex-col max-smlg:max-w-lg max-smlg:mx-auto max-lg:flex-wrap'>
+        <Container>
+        <Wrapper className='flex justify-between gap-[32px] max-smlg:gap-[30px] max-smlg:flex-col max-smlg:max-w-lg max-smlg:mx-auto max-lg:flex-wrap'>
           <Wrapper className='max-lg:w-[calc(50%-22.5px)] max-lg:flex-none w-[28%] max-md:flex-1 max-md:w-full items-center flex flex-col gap-[10px]' anchor={'#WhyRuvo'} animation={'fade-up'} delay={100}>
             
             <Image src={Empowering.src} alt='Empowering Transportation Marketplace' className='w-[210px] h-[210px] rounded-full mx-auto block'  width={Empowering.width} height={Empowering.height} />
@@ -67,6 +69,7 @@ const WhyRuvo = () => {
             </Text>
           </Wrapper>
         </Wrapper>
+        </Container>
       </Wrapper>
     </div>
   );

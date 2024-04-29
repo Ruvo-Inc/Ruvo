@@ -5,20 +5,26 @@ import LeagalBanner from '../../assets/images/leagal-banner.png'
 import Hero from '@/app/components/UI/Hero/Hero';
 import Wrapper from '@/app/components/UI/Wrapper/Wrapper';
 import Text from '@/app/components/UI/Text/Text';
+import Container from '@/app/components/UI/Container/Container';
 export default function Leagals() {
     return (
         <>
             <Hero img={LeagalBanner}>
                 <Heading headingStyle='h1' className='text-center text-white'> Ruvo Legal & Privacy</Heading>
             </Hero>
-
-            <Wrapper className='w-full bg-[#FBF7F6]'>
-                <Wrapper className='lg:p-0 p-[20px]'>
-                    <Wrapper className='w-full max-w-[1032px] px-5 py-[65px] mx-auto'>
-                        <Heading headingStyle='h4Class' className='mb-[10px]'>
-                            Terms & Conditions
-                        </Heading>
-                        <Wrapper className='flex flex-col gap-[30px]'>
+            <div id="terms-conditions"></div>
+            <Wrapper className="relative py-[48px] bg-[#FBF7F6] max-smlg:max-w-full">
+        <Container className=" flex gap-x-[30px] justify-between max-smlg:flex-col gap-y-5">
+          <Wrapper className="flex-1 ">
+            <Heading
+              headingStyle="h2"
+              className="!text-[32px] sticky top-[150px]"
+            >
+           Terms & Conditions
+            </Heading>
+          </Wrapper>
+          <Wrapper className="w-full max-w-[855px] min-5xl:max-w-[70%] max-3xlsm:max-w-[60%] max-smlg:max-w-full">
+          <Wrapper className='flex flex-col gap-[30px]'>
                             <Text>
                                 <strong>Introduction</strong> Welcome to Ruvo! Our Terms and Conditions govern your use of Ruvo’s services, including our innovative ride-hailing platform, website, and mobile applications. This document outlines what you can expect from Ruvo and what we expect from you.
                             </Text>
@@ -55,10 +61,22 @@ export default function Leagals() {
                                 <strong id="privacy-policy">Governing Law </strong>These terms are governed by the laws of the jurisdiction in which Ruvo operates, without regard to conflict of law principles.
                             </Text>
                         </Wrapper>
-                        <Heading headingStyle='h4Class' className='mb-[10px] mt-[30px]'>
-                            Privacy Policy
-                        </Heading>
-                        <Wrapper className='flex flex-col gap-[30px]'>
+          </Wrapper>
+        </Container>
+      </Wrapper>
+      <div id="privacy-policy"></div>
+      <Wrapper className="relative py-[48px]  bg-whtie max-smlg:max-w-full">
+        <Container className=" flex gap-x-[30px] justify-between max-smlg:flex-col gap-y-5">
+          <Wrapper className="flex-1 ">
+            <Heading
+              headingStyle="h2"
+              className="!text-[32px] sticky top-[150px]"
+            >
+        Privacy Policy
+            </Heading>
+          </Wrapper>
+          <Wrapper className="w-full max-w-[855px] min-5xl:max-w-[70%] max-3xlsm:max-w-[60%] max-smlg:max-w-full">
+          <Wrapper className='flex flex-col gap-[30px]'>
                             <Text>
                                 <strong>Introduction</strong> At Ruvo, your privacy is our priority. We are committed to protecting your personal information and being transparent about what data we collect and how it is used. This policy outlines our practices in detail.
                             </Text>
@@ -105,10 +123,23 @@ export default function Leagals() {
                                 <strong id="regulatory-information">Contact Information</strong>  If you have any questions or concerns about this policy or our data practices, please contact us at privacy@myruvo.com.
                             </Text>
                         </Wrapper>
-                        <Heading headingStyle='h4Class' className='mb-[10px] mt-[30px]'>
-                    Regulatory Information
-                        </Heading>
-                        <Wrapper className='flex flex-col gap-[30px]'>
+          </Wrapper>
+        </Container>
+      </Wrapper>
+
+      <div id="regulatory-information"></div>
+      <Wrapper className="relative py-[48px]  bg-[#FBF7F6] max-smlg:max-w-full">
+        <Container className=" flex gap-x-[30px] justify-between max-smlg:flex-col gap-y-5">
+          <Wrapper className="flex-1 ">
+            <Heading
+              headingStyle="h2"
+              className="!text-[32px] sticky top-[150px]"
+            >
+              Regulatory Information
+            </Heading>
+          </Wrapper>
+          <Wrapper className="w-full max-w-[855px] min-5xl:max-w-[70%] max-3xlsm:max-w-[60%] max-smlg:max-w-full">
+          <Wrapper className='flex flex-col gap-[30px]'>
                     <Text>
                     
                           <strong>Compliance</strong> Ruvo complies with all applicable data protection laws, transportation regulations, and environmental standards.  </Text>
@@ -117,11 +148,8 @@ export default function Leagals() {
                           <Text>  <strong>Contact Information</strong> For more information or to raise concerns, please contact us at support@myruvo.com.
                     </Text>
                     </Wrapper>
-                    </Wrapper>
-              
-
-                </Wrapper>
-
-            </Wrapper>
-        </>);
+          </Wrapper>
+        </Container>
+      </Wrapper>
+         </>);
 }

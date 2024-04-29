@@ -36,9 +36,4 @@ NavButton.propTypes = {
     link: PropTypes.string.isRequired,
     label: PropTypes.string
 };
-NavButton.defaultProps = {
-    color: "blue",
-    type: "solid",
-    additionalCss:'block'
-};
 export default NavButton;

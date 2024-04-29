@@ -11,14 +11,12 @@ import { headerNav } from '@/app/data/Menu';
 import { usePathname } from 'next/navigation';
 import { gsap } from "gsap";    
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Container from '@/app/components/UI/Container/Container';
 gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
+  const [mode,setMode] = useState('dark')
     const pathname = usePathname();
-    let mode = 'light';    
-   if (pathname === '/pages/homepage-2'){
-    mode = 'dark';
-    }
     const [open,setOpen] = useState(false); 
     const menuOpen = ()=>{
         setOpen(true);
@@ -38,11 +36,11 @@ useEffect(()=>{
             markers: false,
             onEnter: ({ progress, direction, isActive }) => {
               panel.classList.add("bg-primary");
-              panel.classList.add("py-6");
+              setMode('light');
             },
             onLeaveBack: ({ progress, direction, isActive }) => {
               panel.classList.remove("bg-primary");
-              panel.classList.remove("py-6");
+              setMode('dark');
             }
           }
         });
@@ -52,7 +50,8 @@ const close = ()=>{
   setOpen(false)
 }
     return (
-    <Element tag="header" className={`site-header flex items-center justify-between py-[45px] px-[60px] max-sm:p-[20px] fixed top-0 left-0 w-full z-[999] transition-all  duration-500`}>
+    <Element tag="header" className={`site-header max-lg:py-[20px] sticky top-0 left-0 w-full z-[999] transition-all  duration-500`}>
+      <Container className='flex items-center justify-between '>
             <Wrapper className="max-w-[162.16px] max-xl:max-w-[130.16px]">
             <Logo mode={mode}/>
             </Wrapper>
@@ -68,11 +67,11 @@ const close = ()=>{
             </Wrapper>
             <Button color='white' btnType='nav' additionalCss={`fixed w-full h-full top-0 left-0 bg-black bg-opacity-50 !border-0 ${open ? 'block' : 'hidden'}`} event={menuClose}></Button>
             <Wrapper className='max-lg:block hidden'>
-                <Button event={menuOpen} color='white' btnType='nav' type='button' >
-                    <Icon size="24px" type="menu" colorClass='fill-white' />
+                <Button event={menuOpen} color='gray' btnType='nav' type='button' additionalCss='!p-2' >
+                    <Icon size="24px" type="menu" colorClass={`${mode === 'dark' ? ' fill-c-gray-600' : ' fill-white'}`} />
                 </Button>
             </Wrapper>
-            
+            </Container>
     </Element>
     );
 }

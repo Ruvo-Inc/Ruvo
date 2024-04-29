@@ -1,7 +1,7 @@
 'use client'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Wrapper from "../../UI/Wrapper/Wrapper";
 import Heading from "../../UI/Heading/Heading";
 import Text from "../../UI/Text/Text";
@@ -9,18 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HowRuvoWorks = () => {
   const bar = useRef();
+  const [resize,setResize] = useState('');
+  useEffect(() => {
+    const lastpanel = gsap.utils.toArray(".makes-text:last-child");
+    const trigger = gsap.utils.toArray(".the-trigger-point");
+    bar.current.style.maxHeight = trigger[0].clientHeight - lastpanel[0].clientHeight  + "px";
+  },[resize]);
   useEffect(() => {
       const panels = gsap.utils.toArray(".makes-text");
     const panelsHeight = gsap.utils.toArray(".makes-text:not(:last-child)");
-    const lastpanel = gsap.utils.toArray(".makes-text:last-child");
-    const trigger = gsap.utils.toArray(".the-trigger-point");
+
     const panelHeights = panelsHeight.map(panel => panel.clientHeight);
     const endPositions = panelHeights.reduce((acc, height) => {
-      acc.push(acc.length === 0 ? height : acc[acc.length - 1] + height + 60);
+      acc.push(acc.length === 0 ? height : acc[acc.length - 1] + height + 80);
       return acc;
     }, []);
-    
-     bar.current.style.maxHeight = trigger[0].clientHeight - lastpanel[0].clientHeight + "px";
+      
     panels.forEach((panel, index) => {
       const op3 = gsap.timeline({
         scrollTrigger: {
@@ -30,7 +34,9 @@ const HowRuvoWorks = () => {
           scrub: 1,
           markers: false,
           onEnter: ({ progress, direction, isActive }) => {
+            setResize(progress)
             panel.classList.add("enter");
+         
           },
           onLeaveBack: ({ progress, direction, isActive }) => {
             panel.classList.remove("enter");
@@ -48,16 +54,15 @@ const HowRuvoWorks = () => {
         }
       });
       bar.to(".theBar", { height: endPositions[index]});
-    });
-
-
+    });    
 
   }, []);
   return (
-<Wrapper className=" relative overflow-hidden max-md:py-[50px] pt-[68px] pb-[170px] max-md:px-5 the-gradient">
+   
+<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-12 max-md:px-5 the-gradient">
   <Heading
     headingStyle="h3Class"
-    className="text-primary text-center max-smlg:!text-[24px] !text-[60px]"
+    className="text-primary text-center max-smlg:!text-[24px] !text-[48px]"
   >
     How Ruvo works
   </Heading>
@@ -80,8 +85,8 @@ const HowRuvoWorks = () => {
     />
     <Card
       postion="right"
-      heading="Select a driver"
-      text="You have a choice"
+      heading="Accept or Decline Guest"
+      text="You have a choice too"
       index={3}
       type="driver"
     />
@@ -193,7 +198,7 @@ export function Card({ postion, index, heading, text, type }) {
                 </Wrapper>
               )}
 
-              <Heading headingStyle="h3Class" className="mt-[8px] mb-[11px] max-md:text-center">
+              <Heading headingStyle="h3Class" className="mt-[8px] mb-[11px] max-md:text-center max-sm:text-[20px]">
                 {heading}
               </Heading>
               <Text>{text}</Text>

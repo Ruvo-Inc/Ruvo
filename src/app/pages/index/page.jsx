@@ -1,49 +1,95 @@
-'use client'
-import './style.css';
-import Banner from '@/app/assets/images/Home/banner.png'
+"use client";
+import "./style.css";
+import Banner from "../../assets/images/Home/banner.webp";
 import Element from "@/app/components/UI/Element/Element";
 import Wrapper from "@/app/components/UI/Wrapper/Wrapper";
 import Heading from "@/app/components/UI/Heading/Heading";
 import NavButton from "@/app/components/UI/NavButton/NavButton";
-import HowRuvoWorks from '@/app/components/Sections/Home/HowRuvoWorks';
-import Image from 'next/image';
-import Logo from '@/app/components/UI/SiteLogo/Logo';
+import HowRuvoWorks from "@/app/components/Sections/Home/HowRuvoWorks";
+import Container from "@/app/components/UI/Container/Container";
+import ImageText from "@/app/components/UI/reusable-components/ImageText";
+import WhyRuvo from "@/app/components/Sections/Home/WhyRuvo";
+import ApplyForm from "@/app/components/Form/ApplyForm/ApplyForm";
+import Text from "@/app/components/UI/Text/Text";
+import Button from "@/app/components/Form/Button/Button";
+import { useRef, useState } from "react";
 
 export default function HomePage() {
+  const [apply, setApply] = useState(false);
+  const applyRef = useRef();
+  const getApply = (e) => {
+    setApply(true);
+    setTimeout(() => {
+      applyRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  };
   return (
     <>
-    <div data-aos="zoom-out" data-aos-duration="800" >
-<Element tag="section" className='relative w-full overflow-hidden home-hero py-[23.12500vw] pb-[19.0104167vw] max-sm:py-[50vw] '>
- 
-  <Wrapper className=' min-5xl:max-w-[1200px] max-w-[32.5vw] max-sm:max-w-[86vw] mx-auto max-smlg:max-w-[40.5vw]'>
-  <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" className='min-sm:mix-blend-difference'>
-    <Logo mode='light'/>
-    </div>
-  <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
-  <Heading headingStyle='h6Class' className='!text-white mt-6 text-center  max-smlg:whitespace-normal whitespace-nowrap home-banner-heading max-xl:text-[30px]'>
-  RIDE THE CHANGE
-  </Heading>
-  </div>
-  </Wrapper>
-   
+      <div data-aos="zoom-out" data-aos-duration="800">
+        <Element
+          tag="section"
+          className="relative w-full overflow-hidden bg-c-green-100 py-12"
+        >
+          <Container>
+            <ImageText
+              heading="Empower Your Journey, Your Way"
+              image={Banner}
+              imagePostion="left"
+            >
+              <Text>
+                Ruvo isn’t just about moving people from place to place. We
+                believe in empowering our community with choices that matter.
+                Whether you're driving or riding, Ruvo puts you in control of
+                how you travel, earn, and connect in a marketplace designed with
+                everyone in mind.
+              </Text>
+              <Wrapper className="max-w-[448px] flex gap-x-6 mt-4 max-sm:gap-x-[15px]">
+                <Button
+                  event={getApply}
+                  color="green"
+                  btnType="solid"
+                  type="button"
+                  label="Apply to Drive"
+                  additionalCss='max-sm:!px-0'
+                />
+                <Button
+                  event={getApply}
+                  color="green"
+                  additionalCss='max-sm:!px-0'
+                  btnType="outlined"
+                  type="button"
+                  label=" Sign up to Ride"
+                />
+              </Wrapper>
+            </ImageText>
+          </Container>
+        </Element>
+      </div>
+      {apply && (
+        <div ref={applyRef}>
+          <ApplyForm />
+        </div>
+      )}
 
-</Element>
-</div>
-      <HowRuvoWorks/>
-      <Wrapper className='py-[60px] bg-primary max-smlg:pt-[50px] max-smlg:pb-[50px]  max-sm:px-[20px]'>
-    <Heading headingStyle='h3Class' className='text-center mb-[16px] text-white ' >
-    Ready to Ride the Change?
-    </Heading>
+      <HowRuvoWorks />
+      <Wrapper className="bg-primary py-[30px] max-sm:px-[20px]">
+        <Heading
+          headingStyle="h3Class"
+          className="text-center mb-4 text-white "
+        >
+          Ready to Ride the Change?
+        </Heading>
 
-    <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] mt-[35px]">
-      <NavButton link='/' color='green' type='solid' >
-      Drive With Us
-      </NavButton>
-      <NavButton link='/' color='green' type='solid' >
-       Ride with Us
-      </NavButton>
-    </Wrapper>
-  </Wrapper>
-</>
+        <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] max-sm:gap-x-[15px]">
+          <NavButton link="/" color="green" type="solid">
+            Drive With Us
+          </NavButton>
+          <NavButton link="/" color="green" type="solid">
+             Ride with Us
+          </NavButton>
+        </Wrapper>
+      </Wrapper>
+      <WhyRuvo />
+    </>
   );
 }
