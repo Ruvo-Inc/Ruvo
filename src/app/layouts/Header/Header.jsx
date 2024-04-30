@@ -65,9 +65,9 @@ const close = ()=>{
 
             </Navigation>
             </Wrapper>
-            <Button color='white' btnType='nav' additionalCss={`fixed w-full h-full top-0 left-0 bg-black bg-opacity-50 !border-0 ${open ? 'block' : 'hidden'}`} event={menuClose}></Button>
+            <Button color='white' btnType='nav' additionalCss={`fixed w-full h-full top-0 left-0 bg-black bg-opacity-50 !rounded-[0] !border-0 ${open ? 'block' : 'hidden'}`} event={menuClose}></Button>
             <Wrapper className='max-lg:block hidden'>
-                <Button event={menuOpen} color='gray' btnType='nav' type='button' additionalCss='!p-2' >
+                <Button event={menuOpen} color='gray' btnType='nav' type='button' additionalCss='!p-2 ' >
                     <Icon size="24px" type="menu" colorClass={`${mode === 'dark' ? ' fill-c-gray-600' : ' fill-white'}`} />
                 </Button>
             </Wrapper>

@@ -74,14 +74,14 @@ const Footer = () => {
         <Wrapper >
           <Heading
             headingStyle="empty"
-            className="font-bold max-md:mb-[10px] mb-[15px] font-Mulish 2xl:text-[24px] text-[18px] text-white"
+            className="font-bold max-md:mb-[10px] mb-[15px] font-mulish 2xl:text-[24px] text-[18px] text-white"
             text="CONTACT US"
           ></Heading>
           <Navigation linkList={footerMenu3} />
           <NavButton
             link="mailto:email@ruvo.com"
             type="nav"
-            additionalCss="flex items-center font-Mulish gap-[10px] text-white font-poppins"
+            additionalCss="flex items-center font-mulish gap-[10px] text-white font-poppins"
           >
             <Icon size="24px" type="email" colorClass="fill-white" />
             info@myruvo.com

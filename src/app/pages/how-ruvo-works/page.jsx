@@ -136,7 +136,7 @@ export function LeftSide({ index, heading, text, image }) {
           <Image src={image?.src} alt="icon" className='ml-auto'  width={image?.width} height={image?.height}/>
           </Wrapper>
           <Wrapper className="flex-1 relative">
-            <Heading headingStyle='empty' className='number max-md:mx-auto max-md:mb-2 min-md:absolute min-md:left-[-83px] min-md:top-[-3px] text-[16px] font-medium font-Mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[14px]'>
+            <Heading headingStyle='empty' className='number max-md:mx-auto max-md:mb-2 min-md:absolute min-md:left-[-83px] min-md:top-[-3px] text-[16px] font-medium font-mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[14px]'>
               {index}
             </Heading>
             <Wrapper className="max-w-[631px] max-md:mx-auto">
@@ -161,7 +161,7 @@ export function RightSide({ index, heading, text, image }) {
       <Wrapper className="flex min-md:py-[40px] py-[20px] gap-[109px] max-md:gap-[10px] max-md:flex-col-reverse max-md:items-center">
 
         <Wrapper className="flex-1 relative">
-          <Heading headingStyle='empty' className='max-md:mx-auto max-md:mb-2 number min-md:absolute min-md:right-[-83px] min-md:top-[-3px] text-[16px] font-medium font-Mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[14px]'>
+          <Heading headingStyle='empty' className='max-md:mx-auto max-md:mb-2 number min-md:absolute min-md:right-[-83px] min-md:top-[-3px] text-[16px] font-medium font-mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[14px]'>
             {index}
           </Heading>
           <Wrapper className="max-w-[631px] text-right ml-auto max-md:mx-auto">

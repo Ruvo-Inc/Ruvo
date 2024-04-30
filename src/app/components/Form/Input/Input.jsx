@@ -16,7 +16,7 @@ const Input = ({ type, placeholder, required, label, setData, value, name }) => 
                     required={required}
                     value={value}
                     onChange={(e) => { setData(e) }}
-                    className="placeholder:text-c-gray-400 text-sm border border-c-gray-400 rounded-[10px] font-mulish font-medium text-c-gray-600 p-[20px] max-sm:p-[12px]"
+                    className="placeholder:text-c-gray-400 text-sm border border-c-gray-400 rounded-[100px] font-mulish font-medium text-c-gray-600 p-[16px] max-sm:p-[12px]"
                 />
                 <label className="block font-medium text-c-gray-600 font-mulish text-sm mb-2">
                     {label}

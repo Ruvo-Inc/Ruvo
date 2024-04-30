@@ -28,6 +28,7 @@
 .about-bg-2{
     background-image: url(../../assets/images//About/iStock-1460170484.webp);
     background-size: cover;
+    background-position: 70%;
 }
 .wrapper-div{
     opacity: 0.2;

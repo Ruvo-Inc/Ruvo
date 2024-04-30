@@ -12,58 +12,70 @@ import WhyRuvo from "@/app/components/Sections/Home/WhyRuvo";
 import ApplyForm from "@/app/components/Form/ApplyForm/ApplyForm";
 import Text from "@/app/components/UI/Text/Text";
 import Button from "@/app/components/Form/Button/Button";
-import { useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
-export default function HomePage() {
+const HomePageContent = () => {
   const [apply, setApply] = useState(false);
   const applyRef = useRef();
+  const hash = useSearchParams();
   const getApply = (e) => {
     setApply(true);
     setTimeout(() => {
       applyRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
+  useEffect(() => {
+    hash.get("form") === "1" ? setApply(true) : setApply(false);
+    setTimeout(() => {
+      hash.get("form") === "1"
+        ? applyRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+        : "";
+    }, 100);
+  }, [hash]);
+  
   return (
     <>
-      <div data-aos="zoom-out" data-aos-duration="800">
-        <Element
-          tag="section"
-          className="relative w-full overflow-hidden bg-c-green-100 py-12"
-        >
-          <Container>
-            <ImageText
-              heading="Empower Your Journey, Your Way"
-              image={Banner}
-              imagePostion="left"
-            >
-              <Text>
-                Ruvo isn’t just about moving people from place to place. We
-                believe in empowering our community with choices that matter.
-                Whether you're driving or riding, Ruvo puts you in control of
-                how you travel, earn, and connect in a marketplace designed with
-                everyone in mind.
-              </Text>
-              <Wrapper className="max-w-[448px] flex gap-x-6 mt-4 max-sm:gap-x-[15px]">
-                <Button
-                  event={getApply}
-                  color="green"
-                  btnType="solid"
-                  type="button"
-                  label="Apply to Drive"
-                  additionalCss='max-sm:!px-0'
-                />
-                <Button
-                  event={getApply}
-                  color="green"
-                  additionalCss='max-sm:!px-0'
-                  btnType="outlined"
-                  type="button"
-                  label=" Sign up to Ride"
-                />
-              </Wrapper>
-            </ImageText>
-          </Container>
-        </Element>
+      <div className="overflow-hidden">
+        <div data-aos="zoom-out" data-aos-duration="800">
+          <Element tag="section" className="relative w-full overflow-hidden bg-c-green-100 py-12">
+            <Container>
+              <ImageText
+                heading="Empower Your Journey, Your Way"
+                image={Banner}
+                imagePostion="left"
+              >
+                <Text>
+                  At Ruvo, we're driven by the belief that better choices lead to better lives.
+                  That’s why we’re launching the first all-electric ride-hailing marketplace that
+                  not only offers a greener way to travel but empowers our community to choose how
+                  they move, work, and thrive. Every journey with us is a step towards a sustainable
+                  future, fueled by innovation and driven by the power of choice. Join us as we
+                  transform urban mobility and create opportunities that matter—for our planet, our
+                  riders, and our drivers.
+                </Text>
+                <Wrapper className="max-w-[448px] flex gap-x-3 mt-4 max-sm:gap-x-[15px]">
+                  <Button
+                    event={getApply}
+                    color="green"
+                    btnType="solid"
+                    type="button"
+                    label="Apply to Drive"
+                    additionalCss="max-sm:!px-0"
+                  />
+                  <Button
+                    event={getApply}
+                    color="green"
+                    additionalCss="max-sm:!px-0"
+                    btnType="outlined"
+                    type="button"
+                    label=" Sign up to Ride"
+                  />
+                </Wrapper>
+              </ImageText>
+            </Container>
+          </Element>
+        </div>
       </div>
       {apply && (
         <div ref={applyRef}>
@@ -73,34 +85,38 @@ export default function HomePage() {
 
       <HowRuvoWorks />
       <Wrapper className="bg-primary py-[30px] max-sm:px-[20px]">
-        <Heading
-          headingStyle="h3Class"
-          className="text-center mb-4 text-white "
-        >
+        <Heading headingStyle="h3Class" className="text-center mb-4 text-white ">
           Ready to Ride the Change?
         </Heading>
 
         <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] max-sm:gap-x-[15px]">
-        <Button
-                  event={getApply}
-                  color="green"
-                  btnType="solid"
-                  type="button"
-                  label=" Drive With Us"
-                  additionalCss='max-sm:!px-0'
-                />
-                <Button
-                  event={getApply}
-                  color="green"
-                  additionalCss='max-sm:!px-0'
-                  btnType="solid"
-                  type="button"
-                  label="  Ride with Us"
-                />
-         
+          <Button
+            event={getApply}
+            color="green"
+            btnType="solid"
+            type="button"
+            label=" Drive With Us"
+            additionalCss="max-sm:!px-0"
+          />
+          <Button
+            event={getApply}
+            color="green"
+            additionalCss="max-sm:!px-0"
+            btnType="solid"
+            type="button"
+            label="  Ride with Us"
+          />
         </Wrapper>
       </Wrapper>
       <WhyRuvo />
     </>
+  );
+};
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomePageContent />
+    </Suspense>
   );
 }

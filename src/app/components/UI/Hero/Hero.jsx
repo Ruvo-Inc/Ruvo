@@ -5,7 +5,7 @@ import Wrapper from '../Wrapper/Wrapper';
 import Image from 'next/image';
 const Hero = ({children,img, styles}) => {
   return (
-   <Element tag="section" className={styles + ' relative w-full overflow-hidden min-h-[100vh]  max-smlg:min-h-[700px]  max-sm:min-h-[120vw] hero-clip' }>
+   <Element tag="section" className={styles + ' relative w-full overflow-hidden min-h-[80vh]  max-smlg:min-h-[700px]  max-sm:min-h-[120vw] hero-clip' }>
     <Wrapper animation='fade-up' delay='500' className='absolute z-[1] top-1/2 left-0 translate-y-[-30%] w-full animated-y px-5'>
     {children}
     </Wrapper>

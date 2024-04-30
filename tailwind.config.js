@@ -29,6 +29,7 @@ module.exports = {
         'max-3xl': {'max':'1536px'},
         'max-2xl': {'max':'1440px'},
         'max-xl': {'max':'1280px'},
+        'max-smxl': {'max':'1266px'},
         'max-tab':{'max':'1024px'},
         'max-lg': {'max':'1024px'},
         'max-smlg': {'max':'990px'},     
@@ -50,7 +51,7 @@ module.exports = {
         'min-xs': {'min':'375px'} 
       },
       colors:{
-        "c-green-600":"#155C27",
+        "c-green-600":"#045B50",
         "c-green-200":"#E6F8C4",
         "c-gray-500":"#494C4B",
         "c-gray-600":"#1F2120",
@@ -61,7 +62,7 @@ module.exports = {
         'c-green-100':'#F7FFF0',
         'c-teal-600':"#045B50",    
         'c-teal-500':"#009A75",
-        'primary':"#155C27",
+        'primary':"#045B50",
         'secondary':"#155C27",
         'rider':"#066DBE",
         'driver':"#8220A6", 

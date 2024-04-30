@@ -18,7 +18,7 @@ function ImageText({image, heading, children, imagePostion, imageClassName}) {
             <Wrapper className='p-[40px] max-smlg:py-[20px]  max-smlg:px-0 max-smlg:w-full'>
                 <div className='max-smlg:max-w-full md:max-w-[666px] mx-auto'>
           
-                    <Heading className='mb-[10px]' headingStyle='h2Class' text={heading ? heading : 'Heading'} />            
+                    <Heading className='mb-[10px] max-xl:text-[36px]' headingStyle='h1Class' text={heading ? heading : 'Heading'} />            
               
                    
             

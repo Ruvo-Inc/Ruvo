@@ -62,7 +62,7 @@ const HowRuvoWorks = () => {
 <Wrapper className=" relative overflow-hidden max-md:py-[50px] py-12 max-md:px-5 bg-white">
   <Heading
     headingStyle="h3Class"
-    className="text-primary text-center max-smlg:!text-[24px] !text-[48px]"
+    className="text-primary text-center"
   >
     How Ruvo works
   </Heading>
@@ -150,7 +150,7 @@ export function Card({ postion, index, heading, text, type }) {
                 } ${
                   type === "both" ? " bg-rider border-[5px] border-driver" : ""
                 } ${type === "blank" ? " bg-primary " : ""}` +
-                " max-md:static max-md:mb-3 max-md:mx-auto number  text-white absolute  text-[20px] font-medium font-Mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[16px]"
+                " max-md:static max-md:mb-3 max-md:mx-auto number  text-white absolute  text-[20px] font-medium font-mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[16px]"
               }
             >
               {index}
@@ -168,7 +168,7 @@ export function Card({ postion, index, heading, text, type }) {
                     `${type === "rider" ? " bg-rider" : ""} ${
                       type === "driver" ? " bg-driver" : ""
                     }  ${type === "blank" ? " bg-primary " : ""}` +
-                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
+                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px] uppercase font-bold font-mulish"
                   }
                 >
                   {type}
@@ -181,7 +181,7 @@ export function Card({ postion, index, heading, text, type }) {
                     headingStyle="empty"
                     className={
                       `bg-rider ` +
-                      "text-white  rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
+                      "text-white  rounded-[5px] py-[5px] px-[18px] inline-block text-[14px] uppercase font-bold font-mulish"
                     }
                   >
                     rider
@@ -190,7 +190,7 @@ export function Card({ postion, index, heading, text, type }) {
                     headingStyle="empty"
                     className={
                       `bg-driver ` +
-                      "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[16px] uppercase font-bold font-mulish"
+                      "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px] uppercase font-bold font-mulish"
                     }
                   >
                     driver
@@ -198,7 +198,7 @@ export function Card({ postion, index, heading, text, type }) {
                 </Wrapper>
               )}
 
-              <Heading headingStyle="h3Class" className="mt-[8px] mb-[11px] max-md:text-center max-sm:text-[20px]">
+              <Heading headingStyle="h3Class" className="mt-[8px] mb-[11px] max-md:text-center max-sm:text-[20px] !text-[22px]">
                 {heading}
               </Heading>
               <Text>{text}</Text>
