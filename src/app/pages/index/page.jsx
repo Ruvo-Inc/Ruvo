@@ -38,7 +38,7 @@ const HomePageContent = () => {
     <>
       <div className="overflow-hidden">
         <div data-aos="zoom-out" data-aos-duration="800">
-          <Element tag="section" className="relative w-full overflow-hidden bg-c-green-100 py-12">
+          <Element tag="section" className="relative w-full overflow-hidden bg-c-green-100 py-8">
             <Container>
               <ImageText
                 heading="Empower Your Journey, Your Way"
@@ -60,7 +60,7 @@ const HomePageContent = () => {
                     color="green"
                     btnType="solid"
                     type="button"
-                    label="Apply to Drive"
+                    label="Apply to drive"
                     additionalCss="max-sm:!px-0"
                   />
                   <Button
@@ -69,7 +69,7 @@ const HomePageContent = () => {
                     additionalCss="max-sm:!px-0"
                     btnType="outlined"
                     type="button"
-                    label=" Sign up to Ride"
+                    label=" Sign up to ride"
                   />
                 </Wrapper>
               </ImageText>
@@ -84,9 +84,9 @@ const HomePageContent = () => {
       )}
 
       <HowRuvoWorks />
-      <Wrapper className="bg-primary py-[30px] max-sm:px-[20px]">
-        <Heading headingStyle="h3Class" className="text-center mb-4 text-white ">
-          Ready to Ride the Change?
+      <Wrapper className="bg-c-green-100 py-6 max-sm:px-[20px]">
+        <Heading headingStyle="h3Class" className="text-center mb-3 ">
+          Ready to ride the change?
         </Heading>
 
         <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] max-sm:gap-x-[15px]">
@@ -95,16 +95,16 @@ const HomePageContent = () => {
             color="green"
             btnType="solid"
             type="button"
-            label=" Drive With Us"
-            additionalCss="max-sm:!px-0"
+            label="Apply to drive"
+            additionalCss="max-sm:!px-0 bg-[#DA4615]"
           />
           <Button
             event={getApply}
             color="green"
-            additionalCss="max-sm:!px-0"
-            btnType="solid"
+            additionalCss="max-sm:!px-0 !bg-white !border-[#DA4615] !text-[#DA4615]"
+            btnType="outlined"
             type="button"
-            label="  Ride with Us"
+            label="  Sign up to ride"
           />
         </Wrapper>
       </Wrapper>

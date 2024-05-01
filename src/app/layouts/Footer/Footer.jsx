@@ -19,13 +19,15 @@ const Footer = () => {
   return (
     <Element
       tag="footer"
-      className="bg-c-gray-600 pt-12"
+      className="bg-c-gray-600 pt-8"
     >
       <Container>
       <Wrapper className=' flex justify-between max-smlg:flex-col max-smlg:gap-4 pb-12'>
-      <Wrapper className="max-w-[162.16px] max-xl:max-w-[130.16px]">
+      <Wrapper>
+      <Wrapper className="max-w-[75px]">
         <Logo mode="light" />
-        <Wrapper className="flex gap-x-[15px] mt-24 max-sm:mt-4">
+        </Wrapper>
+        <Wrapper className="flex gap-x-[15px] mt-12 max-sm:mt-4">
             <a href="/" target="_blank">
               <div className="border border-solid border-white rounded-3xl hover:bg-[white]  hover:text-[green]  hover:scale-125 hover:delay-150 transition-all duration-300 2xl:p-[13px] p-[11px] text-[white] ">
                 <FaFacebookF />
@@ -59,7 +61,7 @@ const Footer = () => {
           <Heading
             headingStyle="empty"
             className="font-bold max-md:mb-[10px] mb-[15px] 2xl:text-[24px] text-[18px] text-white"
-            text="DISCOVER RUVO"
+            text="Discover ruvo"
           ></Heading>
           <Navigation linkList={footerMenu1} />
         </Wrapper>
@@ -67,7 +69,7 @@ const Footer = () => {
           <Heading
             headingStyle="empty"
             className="font-bold max-md:mb-[10px] mb-[15px] 2xl:text-[24px] text-[18px] text-white"
-            text="LEGAL & CORPORATE"
+            text="Legal & corporate"
           ></Heading>
           <Navigation linkList={footerMenu2} />
         </Wrapper>
@@ -75,7 +77,7 @@ const Footer = () => {
           <Heading
             headingStyle="empty"
             className="font-bold max-md:mb-[10px] mb-[15px] font-mulish 2xl:text-[24px] text-[18px] text-white"
-            text="CONTACT US"
+            text="Contact us"
           ></Heading>
           <Navigation linkList={footerMenu3} />
           <NavButton
@@ -90,7 +92,7 @@ const Footer = () => {
       </Wrapper>
       </Wrapper>
       </Container>
-      <Wrapper className='border-t border-c-green-100 py-[14px] border-opacity-50'>
+      <Wrapper className='border-t border-c-green-100 py-2 border-opacity-50'>
       <Text className='text-center text-white text-[14px]'>
       © 2024 RUVO
       </Text>

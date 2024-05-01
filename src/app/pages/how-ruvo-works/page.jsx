@@ -72,7 +72,7 @@ const HowRuvoWorks = () => {
   
   <Wrapper className='py-[100px] px-5 max-md:py-[50px]'>
   <Wrapper className='flex justify-center '>
-        <Heading headingStyle='h3Class' className='text-center uppercase bg-c-green-600 text-white inline-block py-[18px] px-[55px] rounded-[10px]'>
+        <Heading headingStyle='h3Class' className='text-center  bg-c-green-600 text-white inline-block py-[18px] px-[55px] rounded-[10px]'>
           Steps
         </Heading>
         </Wrapper>

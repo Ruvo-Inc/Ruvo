@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+'use client'
+import { useState } from 'react';
 import './style.css'
 import Wrapper from '../../UI/Wrapper/Wrapper';
 import Input from '../Input/Input';

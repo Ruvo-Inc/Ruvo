@@ -1,5 +1,4 @@
 .the-text-animation span{
-    opacity: 0.1;
     transition: 0.5s;
 }
 .the-text-animation .active-op{
@@ -31,7 +30,6 @@
     background-position: 70%;
 }
 .wrapper-div{
-    opacity: 0.2;
     transition: 0.3s;
 }
 .wrapper-div.active-op{

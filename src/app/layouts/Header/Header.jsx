@@ -50,9 +50,9 @@ const close = ()=>{
   setOpen(false)
 }
     return (
-    <Element tag="header" className={`site-header max-lg:py-[20px] sticky top-0 left-0 w-full z-[999] transition-all  duration-500`}>
+    <Element tag="header" className={`site-header sticky top-0 left-0 w-full z-[999]`}>
       <Container className='flex items-center justify-between '>
-            <Wrapper className="max-w-[162.16px] max-xl:max-w-[130.16px]">
+            <Wrapper className="max-w-[75px]">
             <Logo mode={mode}/>
             </Wrapper>
             <Wrapper className={`mobile-drawer z-10 max-tab:z-[99]   max-tab:fixed max-tab:w-[80%] max-tab:h-full max-tab:bg-white max-tab:top-0 max-tab:transition-all max-tab:duration-300 ${open ? 'left-0' : 'left-[-100%]'}`}>
@@ -66,7 +66,7 @@ const close = ()=>{
             </Navigation>
             </Wrapper>
             <Button color='white' btnType='nav' additionalCss={`fixed w-full h-full top-0 left-0 bg-black bg-opacity-50 !rounded-[0] !border-0 ${open ? 'block' : 'hidden'}`} event={menuClose}></Button>
-            <Wrapper className='max-lg:block hidden'>
+            <Wrapper className='max-lg:block hidden py-3'>
                 <Button event={menuOpen} color='gray' btnType='nav' type='button' additionalCss='!p-2 ' >
                     <Icon size="24px" type="menu" colorClass={`${mode === 'dark' ? ' fill-c-gray-600' : ' fill-white'}`} />
                 </Button>

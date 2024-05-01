@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const Button = ({ children, type, btnType, label, loading, color , loadingText, event, additionalCss}) => {
-    let classes = `${additionalCss || ''}  border font-mulish text-[16px] leading-none font-bold  transition-all duration-300 py-[18px] px-[30px] w-full block text-center uppercase rounded-[100px] ${loading ? ' opacity-50' : '' }`;
+    let classes = `${additionalCss || ''}  border font-mulish text-[16px] leading-none font-bold  transition-all duration-300 py-[18px] px-[30px] w-full block text-center  rounded-[100px] ${loading ? ' opacity-50' : '' }`;
     if (btnType === "solid" && color === 'green') {
         classes += `  text-white bg-c-green-600 border-white`;
     }

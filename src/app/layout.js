@@ -8,7 +8,7 @@ import { ThemeConfiger } from "./contexts/ThemeConfig/ThemeConfig";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ruvo",
+  title: "Ruvo - Home",
   description: "DRIVE CHANGE, RIDE GREEN",
 };
 

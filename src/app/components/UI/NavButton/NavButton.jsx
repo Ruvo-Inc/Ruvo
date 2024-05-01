@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import './NavButton.css';
 import Link from 'next/link'
 const NavButton = ({ children, type, link, label , color, additionalCss }) => {
-    let classes = `${additionalCss}  border font-mulish text-[16px] max-sm:text-[14px] leading-none font-bold  transition-all duration-300 py-[18px] px-[30px] max-sm:px-[15px] max-xs:!px-[5px]  w-full block text-center uppercase rounded-[100px]`;
+    let classes = `${additionalCss}  border font-mulish text-[16px] max-sm:text-[14px] leading-none font-bold  transition-all duration-300 py-[18px] px-[30px] max-sm:px-[15px] max-xs:!px-[5px]  w-full block text-center  rounded-[100px]`;
     if (type === "solid" && color === 'green') {
         classes += `  text-white bg-c-green-600 border-white hover:bg-white hover:text-c-gray-600 hover:border-c-gray-600`;
     }
