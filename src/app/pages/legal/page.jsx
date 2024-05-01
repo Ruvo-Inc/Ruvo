@@ -67,7 +67,7 @@ export default function Leagals() {
                     </p>
                     <ul className="list-disc text-[16px] font-normal font-mulish pl-[28px]">
                       <li className="text-[16px] font-medium font-mulish text-c-gray-600 max-xl:text-[14px]">
-                        <strong>Age Restrictions:</strong> <br /> A You must be at
+                        <strong>Age Restrictions:</strong> <br /> You must be at
                         least 18 years old to create an account and use Ruvo’s
                         services.
                       </li>

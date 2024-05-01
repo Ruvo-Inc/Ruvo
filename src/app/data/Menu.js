@@ -125,7 +125,7 @@ export const HomeItems = [
 
 export const ValuesCulture = [
   {
-    heading: 'Our commitment to a righter future',
+    heading: 'Our commitment to a brighter future',
     text: 'At Ruvo, our values are the compass that guides our actions, our culture is the terrain we navigate, and together they map our journey toward transforming urban mobility.'
   },
   {

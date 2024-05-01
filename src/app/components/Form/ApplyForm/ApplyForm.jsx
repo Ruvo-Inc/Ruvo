@@ -253,7 +253,7 @@ const ApplyForm = () => {
             <Button
               event={onSubmitForm}
               btnType="solid"
-              color="green"
+              color="orange"
               label="Submit"
               loading={loading}
               loadingText="Submitting"
