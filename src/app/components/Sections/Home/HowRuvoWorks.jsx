@@ -59,7 +59,7 @@ const HowRuvoWorks = () => {
   }, []);
   return (
    
-<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-8 max-md:px-5 bg-white">
+<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-4 max-md:px-5 bg-white">
   <Heading
     headingStyle="h3Class"
     className="text-primary text-center"
@@ -85,7 +85,7 @@ const HowRuvoWorks = () => {
     />
     <Card
       postion="right"
-      heading="Accept or Decline Guest"
+      heading="Accept or Decline Ride"
       text="You have a choice too"
       index={3}
       type="driver"
@@ -135,16 +135,16 @@ export function Card({ postion, index, heading, text, type }) {
   return (
     <>
       <Wrapper className={ `makes-text relative makes-text-${index}` }>
-        <Wrapper className="flex py-4 gap-[109px]">
+        <Wrapper className="flex py-2 gap-[109px]">
           {postion === "right" && (
-            <Wrapper className="flex-1 max-md:hidden"></Wrapper>
+            <Wrapper className="flex-1 max-md:hidden min-h-[98px]"></Wrapper>
           )}
           <Wrapper className="flex-1 relative pt-[10px]">
             <Heading
               headingStyle="empty"
               className={
                 `${postion === "left" ? " right-[-83px]" : " left-[-83px]"}` +
-                `${type === "blank" ? " top-[0]" : " top-[0px]"}` +                
+                `${type === "blank" ? " top-[0px]" : " top-[0px]"}` +                
                 `${type === "rider" ? " bg-black" : ""} ${
                   type === "driver" ? " bg-black" : ""
                 } ${
@@ -205,7 +205,7 @@ export function Card({ postion, index, heading, text, type }) {
             </Wrapper>
           </Wrapper>
           {postion === "left" && (
-            <Wrapper className="flex-1 max-md:hidden"></Wrapper>
+            <Wrapper className="flex-1 max-md:hidden min-h-[98px]"></Wrapper>
           )}
         </Wrapper>
       </Wrapper>

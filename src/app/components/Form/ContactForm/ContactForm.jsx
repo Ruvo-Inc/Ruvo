@@ -22,9 +22,9 @@ const ContactForm = () => {
         <>
             <form className='flex gap-[20px] w-full flex-col' onSubmit={onSubmitForm}>
                 <Wrapper className='flex gap-[20px] w-full max-sm:flex-col'>
-                    <Input name="firstName" required={true} type='text' placeholder='Jhon' label='First Name' value={formData?.firstName}
+                    <Input name="firstName" required={true} type='text' placeholder='First Name' label='First Name' value={formData?.firstName}
                         setData={handleChange} />
-                    <Input name="lastName" required={true} type='text' placeholder='Duo' label='Last Name' value={formData?.lastName}
+                    <Input name="lastName" required={true} type='text' placeholder='Last Name' label='Last Name' value={formData?.lastName}
                         setData={handleChange} />
                 </Wrapper>
                 <Wrapper className='flex gap-[20px]  w-full  max-sm:flex-col'>
@@ -38,7 +38,7 @@ const ContactForm = () => {
 
                 </Textarea>
                 <Wrapper className='flex mt-[15px] max-w-[204px]'>
-                <Button btnType='solid' loading={loading}  loadingText='Submitting...' type="Submit" color='green' >
+                <Button btnType='solid' loading={loading}  loadingText='Submitting...' type="Submit" color='orange' >
                 Submit Inquiry
                 </Button>
                 </Wrapper>

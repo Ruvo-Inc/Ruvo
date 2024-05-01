@@ -21,7 +21,7 @@ const Sustainability = () => {
       
       <Wrapper className='bg-c-green-100 py-8'>
       <Container>
-        <Wrapper className='flex justify-between gap-x-12  gap-y-7 max-smlg:flex-col'>
+        <Wrapper className='flex justify-between gap-x-12  gap-y-7 max-smlg:flex-col items-start'>
             <Wrapper className='flex-[30%] max-smxl:flex-1 max-smxl:w-full overflow-hidden rounded-xl  bg-white border border-c-teal-500 '>
             <Wrapper className={'  relative flex-1 items-end group'}>
 {BannerImage && (<Wrapper className='relative pb-[65%]'>
@@ -31,14 +31,14 @@ const Sustainability = () => {
 </Wrapper>)}
 
     <Wrapper className='p-4 relative z-[1]'>
-    <Heading headingStyle='h4' > Ruvo's commitment to</Heading>
-        <Heading headingStyle='h1'> Sustainability</Heading>
-        <Heading headingStyle='h4'>  Driving tomorrow's change</Heading>
+    <Heading headingStyle='h1' className='hidden'>Sustainability </Heading>
+    <Heading headingStyle='h4' > Ruvo's commitment to Sustainability Driving tomorrow's change</Heading>
+
     </Wrapper>
   </Wrapper>
         
             </Wrapper>
-            <Wrapper className='flex-[70%] flex gap-6 max-sm:flex-col'>
+            <Wrapper className='flex-[70%] flex gap-6 flex-col'>
 
   <MultiColumnCard
     heading="Our vision for a greener future"
@@ -48,6 +48,7 @@ const Sustainability = () => {
  
 
   <MultiColumnCard
+  className='flex-none'
     heading="Starting with a fully electrified fleet"    
   >
    From day one, Ruvo is pioneering the shift towards sustainable urban mobility with our all-electric vehicle (EV) fleet. Our commitment to environmental stewardship is at the core of our operations, ensuring every Ruvo ride contributes positively to our planet.

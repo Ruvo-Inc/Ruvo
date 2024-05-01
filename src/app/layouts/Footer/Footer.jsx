@@ -27,7 +27,7 @@ const Footer = () => {
       <Wrapper className="max-w-[75px]">
         <Logo mode="light" />
         </Wrapper>
-        <Wrapper className="flex gap-x-[15px] mt-12 max-sm:mt-4">
+        <Wrapper className="flex gap-x-[15px] mt-5 max-sm:mt-4">
             <a href="/" target="_blank">
               <div className="border border-solid border-white rounded-3xl hover:bg-[white]  hover:text-[green]  hover:scale-125 hover:delay-150 transition-all duration-300 2xl:p-[13px] p-[11px] text-[white] ">
                 <FaFacebookF />
@@ -61,7 +61,7 @@ const Footer = () => {
           <Heading
             headingStyle="empty"
             className="font-bold max-md:mb-[10px] mb-[15px] 2xl:text-[24px] text-[18px] text-white"
-            text="Discover ruvo"
+            text="Discover Ruvo"
           ></Heading>
           <Navigation linkList={footerMenu1} />
         </Wrapper>

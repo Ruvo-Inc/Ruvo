@@ -97,7 +97,7 @@ const WhyDriveRuvo = () => {
     </Container>
   </Wrapper>
 
-  <Wrapper className="bg-c-green-100 py-6 max-sm:px-[20px]">
+  <Wrapper className="bg-c-green-100 py-4 max-sm:px-[20px]">
     <Heading headingStyle="h3Class" className="text-center  ">
       Ready to maximize your driving efficiency?
     </Heading>
@@ -110,9 +110,8 @@ const WhyDriveRuvo = () => {
     <Wrapper className="max-w-[220px] mx-auto flex gap-x-[25px]">
       <NavButton
         link="/?form=1"
-        color="green"
+        color="orange"
         type="solid"
-        additionalCss="bg-[#DA4615]"
       >
         Apply to Drive
       </NavButton>

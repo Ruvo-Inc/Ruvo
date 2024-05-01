@@ -26,10 +26,10 @@ const WhyRuvo = () => {
               Empowering transportation marketplace
             </Heading>
             <Text className='text-left'>
-              At Ruvo, you as Partners set your own prices.
+              At Ruvo, you as drivers set your own prices.
               <br />
               <br />
-              Freedom of choice extends to our guests too—select your driver based on verified partner profiles for a tailored travel experience that meets your expectations every time.
+              Freedom of choice extends to our riders too—select your driver based on verified partner profiles for a tailored travel experience that meets your expectations every time.
             </Text>
           </Wrapper>
           <Wrapper className=' flex-1 items-center max-md:w-full flex flex-col gap-[10px]' anchor={'#WhyRuvo'} animation={'fade-up'} delay={200}>
@@ -38,7 +38,7 @@ const WhyRuvo = () => {
             Uncompromised trust and safety
             </Heading>
             <Text className='text-left '>
-            Every partner and guest is thoroughly verified, ensuring a community of trust and respect.
+            Every driver and rider is thoroughly verified, ensuring a community of trust and respect.
 
               <br />
               <br />

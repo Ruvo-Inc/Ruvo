@@ -201,7 +201,7 @@ function AboutUs() {
           </Wrapper>
         </Container>
       </Wrapper>
-      <Wrapper className="bg-c-green-100 py-6 max-sm:px-[20px]">
+      <Wrapper className="bg-c-green-100 py-4 max-sm:px-[20px]">
         <Heading
           headingStyle="h3Class"
           className="text-center mb-4  "

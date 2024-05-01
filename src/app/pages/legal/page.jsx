@@ -26,7 +26,7 @@ export default function Leagals() {
           </Wrapper>
           <div id="terms-conditions"></div>
           <Wrapper className="relative pt-5 pb-8  max-smlg:max-w-full">
-            <Wrapper className="flex-1  sticky top-[52px] bg-white p-3  max-tab:top-[66px]">
+            <Wrapper className="flex-1  sticky top-[52px] bg-white py-3  max-tab:top-[66px]">
               <Container className=" flex gap-x-[30px] justify-between flex-col gap-y-4">
                 {" "}
                 <Heading headingStyle="h2" className="!text-[24px]">
@@ -127,7 +127,7 @@ export default function Leagals() {
           </Wrapper>
           <div id="privacy-policy"></div>
           <Wrapper className="relative pt-5 pb-8  bg-whtie max-smlg:max-w-full  bg-c-green-100">
-            <Wrapper className="flex-1  sticky top-[52px] bg-c-green-100 p-3 max-tab:top-[66px]">
+            <Wrapper className="flex-1  sticky top-[52px] bg-c-green-100 py-3 max-tab:top-[66px]">
               <Container>
                 <Heading headingStyle="h2" className="!text-[24px]">
                   Privacy Policy
@@ -266,7 +266,7 @@ export default function Leagals() {
       
           <div id="regulatory-information"></div>
           <Wrapper className="relative pt-5 pb-8   max-smlg:max-w-full">
-            <Wrapper className="flex-1 sticky top-[52px] bg-white p-3  max-tab:top-[66px]">
+            <Wrapper className="flex-1 sticky top-[52px] bg-white py-3  max-tab:top-[66px]">
               <Container>
                 <Heading headingStyle="h2" className="!text-[24px] ">
                   Regulatory Information

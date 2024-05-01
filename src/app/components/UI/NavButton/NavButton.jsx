@@ -21,7 +21,12 @@ const NavButton = ({ children, type, link, label , color, additionalCss }) => {
     if (type === "nav") {
         classes = additionalCss + ' text-[16px] leading-none font-medium ';
     }   
-
+    if (type === "outlined" && color === 'orange') {
+        classes += `${additionalCss || ''} !bg-white !border-[#DA4615] !text-[#DA4615]  hover:!bg-[#DA4615]  hover:border hover:border-[#DA4615] hover:!text-[#fff]`
+        }
+        if (type === "solid" && color === 'orange') {
+            classes += `${additionalCss || ''} text-white !bg-[#DA4615] hover:!bg-white hover:border hover:border-[#DA4615] hover:!text-[#DA4615]`
+            }
     return (
         <>
             <Link href={link} className={classes} >

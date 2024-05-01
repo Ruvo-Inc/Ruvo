@@ -57,7 +57,7 @@ const HomePageContent = () => {
                 <Wrapper className="max-w-[448px] flex gap-x-3 mt-4 max-sm:gap-x-[15px]">
                   <Button
                     event={getApply}
-                    color="green"
+                    color="orange"
                     btnType="solid"
                     type="button"
                     label="Apply to drive"
@@ -65,7 +65,7 @@ const HomePageContent = () => {
                   />
                   <Button
                     event={getApply}
-                    color="green"
+                    color="orange"
                     additionalCss="max-sm:!px-0"
                     btnType="outlined"
                     type="button"
@@ -84,7 +84,7 @@ const HomePageContent = () => {
       )}
 
       <HowRuvoWorks />
-      <Wrapper className="bg-c-green-100 py-6 max-sm:px-[20px]">
+      <Wrapper className="bg-c-green-100 py-4 max-sm:px-[20px]">
         <Heading headingStyle="h3Class" className="text-center mb-3 ">
           Ready to ride the change?
         </Heading>
@@ -92,16 +92,16 @@ const HomePageContent = () => {
         <Wrapper className="max-w-[428px] mx-auto flex gap-x-[25px] max-sm:gap-x-[15px]">
           <Button
             event={getApply}
-            color="green"
+            color="orange"
             btnType="solid"
             type="button"
             label="Apply to drive"
-            additionalCss="max-sm:!px-0 bg-[#DA4615]"
+            additionalCss="max-sm:!px-0 "
           />
           <Button
             event={getApply}
-            color="green"
-            additionalCss="max-sm:!px-0 !bg-white !border-[#DA4615] !text-[#DA4615]"
+            color="orange"
+            additionalCss="max-sm:!px-0 "
             btnType="outlined"
             type="button"
             label="  Sign up to ride"

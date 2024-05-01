@@ -89,7 +89,7 @@ const WhyRuvo = () => {
     </Wrapper>
     
         </>
-            <Wrapper className="bg-c-green-100 py-6 max-sm:px-[20px]">
+            <Wrapper className="bg-c-green-100 py-4 max-sm:px-[20px]">
         <Heading
           headingStyle="h3Class"
           className="text-center  "
@@ -100,7 +100,7 @@ const WhyRuvo = () => {
          Sign up now and take your first step towards a smarter, cleaner commute.
          </Text>
         <Wrapper className="max-w-[220px] mx-auto flex gap-x-[25px]">
-          <NavButton link="/?form=1" color="green" type="outlined" additionalCss='!bg-white !border-[#DA4615] !text-[#DA4615]'>
+          <NavButton link="/?form=1" color="orange" type="outlined" >
            Sign up to Ride
           </NavButton>
         </Wrapper>
