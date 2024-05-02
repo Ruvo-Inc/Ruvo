@@ -10,11 +10,13 @@ import Button from "../Button/Button";
 import Text from "../../UI/Text/Text";
 import Heading from "../../UI/Heading/Heading";
 import Notification from "../../UI/notification/success/Notification";
+import { useThemeConfig } from "@/app/contexts/ThemeConfig/ThemeConfig";
 const ApplyForm = () => {
   const [formData, setFormData] = useState([]);
   const [formError, setFormError] = useState([]);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const {setFormActive, setFormActiveTerm} = useThemeConfig();
   const recaptcha = useRef(null);
   const handleChange = (e) => {
     if (e.target.type === "checkbox") {
@@ -90,6 +92,12 @@ const ApplyForm = () => {
       formData.captchaToken = token;
     }
   };
+  const setForm = ()=> {
+    setFormActive(true)
+  }
+  const setFormTerm = ()=> {
+    setFormActiveTerm(true)
+  }
   return (
     <Wrapper>
       <Container>
@@ -215,8 +223,8 @@ const ApplyForm = () => {
                 required={true}
               >
                 I have read and agree to the{" "}
-                <Link href="/pages/legal#privacy-policy">Privacy Policy</Link> and{" "}
-                <Link href="/pages/legal#terms-conditions">Terms of Service</Link>.
+                <Link href="/pages/legal#privacy-policy" onClick={setForm}>Privacy Policy</Link> and{" "}
+                <Link href="/pages/legal#terms-conditions" onClick={setFormTerm}>Terms of Service</Link>.
               </Checkbox>
               {formError?.legals && !formData?.legals && (
                 <Text className="text-sm text-red-500 mt-1">

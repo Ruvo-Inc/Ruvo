@@ -29,7 +29,7 @@ function AboutUs() {
             <Wrapper className='flex-[30%]'>
               <Heading headingStyle="h1" className="">
                 {" "}
-                About us
+                About Us
               </Heading>
               <Text className="max-w-[676px] mx-auto mt-[10px]">
                 At Ruvo, our essence and ethos are encapsulated in our name, a
@@ -64,7 +64,7 @@ function AboutUs() {
 
       <StickyHeading
         className='bg-white'
-        heading='Essence behind ruvo'
+        heading='Essence behind Ruvo'
       >
         <span className="text-[#D32D08]">
           {" "}
@@ -88,7 +88,7 @@ function AboutUs() {
       <Wrapper className="flex  py-8  bg-c-green-100">
         <Container className=' flex gap-x-[30px] justify-between max-smlg:flex-col gap-y-5'>
           <Wrapper className=" w-full  the-text-animation ">
-            <Heading headingStyle="h2Class" className='!text-[24px]'>Mission & vision</Heading>
+            <Heading headingStyle="h2Class" className='!text-[24px]'>Mission & Vision</Heading>
             <Text className="mt-[10px] text-[18px] text-c-gray-500 !font-black mb-3">
               Energizing rvery move: Ruvo's commitment to tomorrow's transport
             </Text>
@@ -188,7 +188,7 @@ function AboutUs() {
       <Wrapper className="flex py-8  bg-white">
         <Container className=' flex gap-x-[30px] justify-between max-smlg:flex-col gap-y-5 w-full'>
           <Wrapper className=" flex flex-col gap-4  w-full">
-            <Heading headingStyle="h2Class" className='!text-[24px]'>Values & culture</Heading>
+            <Heading headingStyle="h2Class" className='!text-[24px]'>Values & Culture</Heading>
             <Wrapper className='flex flex-wrap gap-6   justify-center'>
               {Object.entries(ValuesCulture).map(([key, item]) => (
                 <MultiColumnCard key={key}

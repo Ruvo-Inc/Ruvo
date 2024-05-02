@@ -14,11 +14,13 @@ import Text from "@/app/components/UI/Text/Text";
 import Button from "@/app/components/Form/Button/Button";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useThemeConfig } from "@/app/contexts/ThemeConfig/ThemeConfig";
 
 const HomePageContent = () => {
   const [apply, setApply] = useState(false);
   const applyRef = useRef();
   const hash = useSearchParams();
+  const {formActive,formActiveTerm, setFormActiveTerm, setFormActive} = useThemeConfig();
   const getApply = (e) => {
     setApply(true);
     setTimeout(() => {
@@ -33,7 +35,14 @@ const HomePageContent = () => {
         : "";
     }, 100);
   }, [hash]);
-  
+  useEffect(()=>{   
+    formActiveTerm === true ?   setApply(formActiveTerm) : ''
+    formActive === true && formActiveTerm === true ?   setFormActive(false) : ''
+  },[formActiveTerm])
+  useEffect(()=>{   
+    formActive === true ?   setApply(formActive) : ''   
+    formActiveTerm === true && formActive === true  ?   setFormActiveTerm(false) : ''   
+  },[formActive])
   return (
     <>
       <div className="overflow-hidden">

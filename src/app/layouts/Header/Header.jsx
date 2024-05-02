@@ -12,12 +12,15 @@ import { usePathname } from 'next/navigation';
 import { gsap } from "gsap";    
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from '@/app/components/UI/Container/Container';
+import { useThemeConfig } from '@/app/contexts/ThemeConfig/ThemeConfig';
 gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   const [mode,setMode] = useState('dark')
     const pathname = usePathname();
     const [open,setOpen] = useState(false); 
+    const {setFormActive,setFormActiveTerm} = useThemeConfig();
+    
     const menuOpen = ()=>{
         setOpen(true);
     }
@@ -49,6 +52,12 @@ useEffect(()=>{
 const close = ()=>{
   setOpen(false)
 }
+useEffect(()=>{
+  if(pathname !== '/' && pathname !== '/pages/legal' ){
+  setFormActive(false);
+  setFormActiveTerm(false);
+}
+},[pathname])
     return (
     <Element tag="header" className={`site-header sticky top-0 left-0 w-full z-[999]`}>
       <Container className='flex items-center justify-between '>

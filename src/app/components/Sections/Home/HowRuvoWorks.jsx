@@ -71,7 +71,7 @@ const HowRuvoWorks = () => {
 
     <Card
       postion="right"
-      heading="Select your Destination"
+      heading="Select your destination"
       text="You can schedule rides without fees"
       index={1}
       type="rider"
@@ -85,46 +85,28 @@ const HowRuvoWorks = () => {
     />
     <Card
       postion="right"
-      heading="Accept or Decline Ride"
+      heading="Accept or Decline ride"
       text="You have a choice too"
       index={3}
       type="driver"
     />
     <Card
-      postion="left"
-      heading="Travel with Confidence"
-      text="We’ve got your back"
-      index={4}
-      type="blank"
-    />
-    <Card
       postion="right"
       heading="Arrive at the destination"
       text="Notify us when the trip has ended"
-      index={5}
+      index={4}
       type="driver"
     />
-    <Card
-      postion="left"
-      heading="Save your preferences"
-      text="Build your driver list to reference on future rides"
-      index={6}
-      type="rider"
+    <CardBothSide
+       postion="left"
+       heading="See the impact we made"
+       text="Track your carbon offset"
+       index={5}
+       type="both"
+       heading1="Rate your travel"
+       text1="Ruvo’s AI will learn from every ride"
     />
-    <Card
-      postion="right"
-      heading="Rate your travel"
-      text="Ruvo’s AI will learn from every ride"
-      index={7}
-      type="blank"
-    />
-    <Card
-      postion="left"
-      heading="See the impact we made"
-      text="Track your carbon offset"
-      index={8}
-      type="both"
-    />
+   
   </Wrapper>
 </Wrapper>
   );
@@ -207,6 +189,98 @@ export function Card({ postion, index, heading, text, type }) {
           {postion === "left" && (
             <Wrapper className="flex-1 max-md:hidden min-h-[98px]"></Wrapper>
           )}
+        </Wrapper>
+      </Wrapper>
+    </>
+  );
+}
+
+export function CardBothSide({ postion, index, heading, text, type, text1, heading1 }) {
+  return (
+    <>
+      <Wrapper className={ `makes-text relative makes-text-${index}` }>
+        <Wrapper className="flex py-2 min-md:gap-[109px] max-md:flex-col">
+          <Wrapper className="flex-1 relative pt-[10px]">
+            <Heading
+              headingStyle="empty"
+              className={
+                `${postion === "left" ? " right-[-83px]" : " left-[-83px]"}` +
+                `${type === "blank" ? " top-[0px]" : " top-[0px]"}` +                
+                `${type === "rider" ? " bg-black" : ""} ${
+                  type === "driver" ? " bg-black" : ""
+                } ${
+                  type === "both" ? " bg-black border-[5px] border-black" : ""
+                } ${type === "blank" ? " bg-black " : ""}` +
+                " max-md:static max-md:mb-3 max-md:mx-auto number  text-white absolute  text-[20px] font-medium font-mulish  w-[57px] h-[57px] rounded-full flex items-center justify-center max-xl:text-[16px]"
+              }
+            >
+              {index}
+            </Heading>
+            <Wrapper
+              className={
+                "max-md:flex max-md:flex-col max-md:items-center" +
+                `${postion === "left" ? " text-right ml-auto" : ""}`
+              }
+            >
+              {type !== "both" && type !== "blank" && (
+                <Heading
+                  headingStyle="empty"
+                  className={
+                    `${type === "rider" ? " bg-black" : ""} ${
+                      type === "driver" ? " bg-black" : ""
+                    }  ${type === "blank" ? " bg-black " : ""}` +
+                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                  }
+                >
+                  {type}
+                </Heading>
+              )}
+
+              {type === "both" && (
+                <Wrapper className="flex gap-[13px] justify-end  min-md:absolute right-0 top-[-15px] ">
+                  <Heading
+                    headingStyle="empty"
+                    className={
+                      `bg-black ` +
+                      "text-white  rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                    }
+                  >
+                    rider
+                  </Heading>
+                  <Heading
+                    headingStyle="empty"
+                    className={
+                      `bg-black ` +
+                      "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                    }
+                  >
+                    driver
+                  </Heading>
+                </Wrapper>
+              )}
+
+              <Heading headingStyle="h3Class" className="mt-[8px] mb-[0px] max-md:text-center max-sm:text-[20px] !text-[22px]">
+                {heading}
+              </Heading>
+              <Text>{text}</Text>
+            </Wrapper>
+          </Wrapper>
+            <Wrapper className="flex-1  min-h-[98px]">
+            <Wrapper className="flex-1 relative pt-[10px]">
+            <Wrapper
+              className={
+                "max-md:flex max-md:flex-col max-md:items-center"}               
+            >           
+
+              <Heading headingStyle="h3Class" className="mt-[8px] mb-[0px] max-md:text-center max-sm:text-[20px] !text-[22px]">
+                {heading1}
+              </Heading>
+              <Text>{text1}</Text>
+            </Wrapper>
+          </Wrapper>
+
+
+            </Wrapper>
         </Wrapper>
       </Wrapper>
     </>

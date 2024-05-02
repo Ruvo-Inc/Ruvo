@@ -22,7 +22,7 @@ const WhyRuvo = () => {
           <Wrapper className='flex-1 max-md:w-full items-center flex flex-col gap-[10px]' anchor={'#WhyRuvo'} animation={'fade-up'} delay={100}>
             
             <Image src={Empowering.src} alt='Empowering Transportation Marketplace' className='w-[210px] h-[210px] rounded-full mx-auto block'  width={Empowering.width} height={Empowering.height} />
-            <Heading headingStyle='h4Class' className='text-left text-[21px]'>
+            <Heading headingStyle='h4Class' className='text-center text-[21px]'>
               Empowering transportation marketplace
             </Heading>
             <Text className='text-left'>
@@ -34,7 +34,7 @@ const WhyRuvo = () => {
           </Wrapper>
           <Wrapper className=' flex-1 items-center max-md:w-full flex flex-col gap-[10px]' anchor={'#WhyRuvo'} animation={'fade-up'} delay={200}>
             <Image src={Uncompromised.src} alt='Uncompromised Trust and Safety' className='w-[210px] h-[210px] rounded-full mx-auto block' width={Uncompromised.width} height={Uncompromised.height}/>
-            <Heading headingStyle='h4Class' className='text-left text-[21px]'>
+            <Heading headingStyle='h4Class' className='text-center text-[21px]'>
             Uncompromised trust and safety
             </Heading>
             <Text className='text-left '>
@@ -48,7 +48,7 @@ const WhyRuvo = () => {
           </Wrapper>
           <Wrapper className='  flex-1 items-center max-md:w-full flex flex-col gap-[10px]' anchor={'#WhyRuvo'} animation={'fade-up'} delay={300}>
             <Image src={Affordability.src} alt='Affordability Meets Reliability' className='w-[210px] h-[210px] rounded-full mx-auto block' width={Affordability.width} height={Affordability.height}/>
-            <Heading headingStyle='h4Class' className='text-left text-[21px]  '>
+            <Heading headingStyle='h4Class' className='text-center text-[21px]  '>
             Affordability meets reliability
             </Heading>
             <Text className='text-left'>
@@ -61,7 +61,7 @@ const WhyRuvo = () => {
           </Wrapper>
           <Wrapper className='flex-1 items-center max-md:w-full flex flex-col gap-[10px]' anchor={'#WhyRuvo'} animation={'fade-up'} delay={400}>
             <Image src={Commitment.src} alt='Commitment to Zero Carbon Emissions' className='w-[210px] h-[210px] rounded-full mx-auto block' width={Commitment.width} height={Commitment.height}/>
-            <Heading headingStyle='h4Class' className='text-left text-[21px]'>
+            <Heading headingStyle='h4Class' className='text-center text-[21px]'>
             Commitment to zero carbon emissions
             </Heading>
             <Text className='text-left'>
