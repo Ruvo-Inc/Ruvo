@@ -10,7 +10,7 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_APPID
   };
   
-  // Initialize Firebase
+  // Initialize Firebase 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 export { app, db } 
