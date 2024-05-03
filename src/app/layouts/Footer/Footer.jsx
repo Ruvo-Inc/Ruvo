@@ -69,7 +69,7 @@ const Footer = () => {
           <Heading
             headingStyle="empty"
             className="font-bold max-md:mb-[10px] mb-[15px] 2xl:text-[24px] text-[18px] text-white"
-            text="Legal & corporate"
+            text="Legal & Corporate"
           ></Heading>
           <Navigation linkList={footerMenu2} />
         </Wrapper>

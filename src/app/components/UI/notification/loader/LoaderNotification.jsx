@@ -24,7 +24,5 @@ LoaderNotification.propTypes = {
     message: PropTypes.string,
     className: PropTypes.string
 };
-LoaderNotification.defaultProps = {    
-    className: ''
-};
+
 export default LoaderNotification;

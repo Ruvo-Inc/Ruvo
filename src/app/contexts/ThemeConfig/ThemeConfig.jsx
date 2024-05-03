@@ -14,6 +14,7 @@ export const ThemeConfiger =  ({children}) => {
   const [themeMode, setThemeMode] = useState('light');
   const [formActive, setFormActive] = useState(false);
   const [formActiveTerm, setFormActiveTerm] = useState(false);
+  const [formType, setFormType] = useState(false);
 
   
   const getPageTitle = (title) => {
@@ -37,7 +38,9 @@ export const ThemeConfiger =  ({children}) => {
     formActive,
     setFormActive,
     formActiveTerm,
-    setFormActiveTerm
+    setFormActiveTerm,
+    formType,
+    setFormType
   };
 
   return (

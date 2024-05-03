@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Wrapper from "../../UI/Wrapper/Wrapper";
 import Heading from "../../UI/Heading/Heading";
 import Text from "../../UI/Text/Text";
+import Container from "../../UI/Container/Container";
 gsap.registerPlugin(ScrollTrigger);
 
 const HowRuvoWorks = () => {
@@ -59,7 +60,12 @@ const HowRuvoWorks = () => {
   }, []);
   return (
    
-<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-4 max-md:px-5 bg-white">
+<Wrapper className=" relative overflow-hidden max-md:py-[50px] py-4 max-md:px-5 bg-white z-[1]">
+  <Container className=' w-full h-full absolute z-[-1] left-1/2 translate-x-[-50%]'>
+    <Wrapper className='how-ruvo-works  w-full h-full'>
+
+    </Wrapper>
+  </Container>
   <Heading
     headingStyle="h3Class"
     className="text-primary text-center"
@@ -68,45 +74,101 @@ const HowRuvoWorks = () => {
   </Heading>
   <Wrapper className="the-trigger-point relative overflow-hidden mt-3 max-md:mt-[0px]">
     <div className="w-[1px] bg-c-gray-400 left-1/2 translate-x-[-50%] absolute theBar top-[30px] max-md:top-[40px] h-0 " ref={bar}></div>
-
-    <Card
-      postion="right"
-      heading="Select your destination"
-      text="You can schedule rides without fees"
-      index={1}
-      type="rider"
+    <CardBothSide
+       postion="left"
+       heading="Select your destination"
+       text="You can schedule rides without fees"
+       index={1}
+       type="rider"
+       heading1="Select a driver"
+       text1="You have a choice"
     />
-    <Card
-      postion="left"
-      heading="Select a driver"
-      text="You have a choice"
-      index={2}
-      type="rider"
-    />
-    <Card
+     <Card
       postion="right"
       heading="Accept or Decline ride"
       text="You have a choice too"
-      index={3}
+      index={2}
       type="driver"
     />
     <Card
       postion="right"
       heading="Arrive at the destination"
       text="Notify us when the trip has ended"
-      index={4}
+      index={3}
       type="driver"
     />
-    <CardBothSide
-       postion="left"
-       heading="See the impact we made"
-       text="Track your carbon offset"
-       index={5}
-       type="both"
-       heading1="Rate your travel"
-       text1="Ruvo’s AI will learn from every ride"
-    />
-   
+     <Card
+      postion="left"
+      heading="Save your preferences"
+      text="Build your driver list to reference on future rides"
+      index={4}
+      type="rider"
+    />   
+  </Wrapper>
+  <Wrapper>
+  <Wrapper className={ `relative` }>
+        <Wrapper className="flex py-2 min-md:gap-[109px] max-md:flex-col">
+          <Wrapper className="flex-1 relative pt-[10px]">     
+            <Wrapper
+              className={
+                "max-md:flex max-md:flex-col max-md:items-center"                
+              }
+            >           
+
+        
+                <Wrapper className="flex gap-[13px] justify-center  ">
+                  <Heading
+                    headingStyle="empty"
+                    className={
+                      `bg-black ` +
+                      "text-white  rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                    }
+                  >
+                    rider
+                  </Heading>
+                  <Heading
+                    headingStyle="empty"
+                    className={
+                      `bg-black ` +
+                      "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                    }
+                  >
+                    driver
+                  </Heading>
+                </Wrapper>
+    
+
+              <Heading headingStyle="h3Class" className="mt-[8px] mb-[0px] text-center max-sm:text-[20px] !text-[22px]">
+              Rate your travel
+              </Heading>
+              <Text  className="text-center ">Ruvo’s AI will learn from every ride
+
+</Text>
+            </Wrapper>
+            <Wrapper className="flex-1">
+            <Wrapper className="flex-1 relative ">
+  
+            <Wrapper
+              className={
+                "max-md:flex max-md:flex-col items-center"}               
+            >           
+
+              <Heading headingStyle="h3Class" className="mt-[8px] mb-[0px] text-center max-sm:text-[20px] !text-[22px]">
+              See the impact we made
+
+              </Heading>
+              <Text className="text-center "> Track your carbon offset
+
+</Text>
+            </Wrapper>
+          </Wrapper>
+
+
+            </Wrapper>
+          </Wrapper>
+        
+        </Wrapper>
+      </Wrapper>
   </Wrapper>
 </Wrapper>
   );
@@ -267,6 +329,19 @@ export function CardBothSide({ postion, index, heading, text, type, text1, headi
           </Wrapper>
             <Wrapper className="flex-1  min-h-[98px]">
             <Wrapper className="flex-1 relative pt-[10px]">
+            {type !== "both" && type !== "blank" && (
+                <Heading
+                  headingStyle="empty"
+                  className={
+                    `${type === "rider" ? " bg-black" : ""} ${
+                      type === "driver" ? " bg-black" : ""
+                    }  ${type === "blank" ? " bg-black " : ""}` +
+                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                  }
+                >
+                  {type}
+                </Heading>
+              )}
             <Wrapper
               className={
                 "max-md:flex max-md:flex-col max-md:items-center"}               

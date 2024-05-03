@@ -100,9 +100,7 @@ const WhyRuvo = () => {
          Sign up now and take your first step towards a smarter, cleaner commute.
          </Text>
         <Wrapper className="max-w-[220px] mx-auto flex gap-x-[25px]">
-          <NavButton link="/?form=1" color="orange" type="outlined" >
-           Sign up to Ride
-          </NavButton>
+          <NavButton link="/?form=2" color="orange" type="outlined" >Sign up to Ride</NavButton>
         </Wrapper>
       </Wrapper>
     </>
@@ -125,9 +123,10 @@ export const MultiColumnCard = ({image,heading,text,className, children})=>{
 
     <Wrapper className='p-4 relative z-[1]'>
       <Heading headingStyle='h4Class' text={heading} className='mb-3  !text-[20px]'/>      
-      <Text className=' '>
-          {text || children}
-      </Text>
+    {text &&   (<Text className=' '>
+          {text}
+      </Text>) }
+      {children &&   (children) }
     </Wrapper>
   </Wrapper>
   </>

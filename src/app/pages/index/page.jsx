@@ -17,42 +17,58 @@ import { useSearchParams } from "next/navigation";
 import { useThemeConfig } from "@/app/contexts/ThemeConfig/ThemeConfig";
 
 const HomePageContent = () => {
-  const [apply, setApply] = useState(false);
+  const [apply, setApply] = useState(false);  
   const applyRef = useRef();
   const hash = useSearchParams();
-  const {formActive,formActiveTerm, setFormActiveTerm, setFormActive} = useThemeConfig();
+  const {formActive,formActiveTerm, setFormActiveTerm, setFormActive, setFormType, formType} = useThemeConfig();
+  const [type, setType] = useState(formType);
   const getApply = (e) => {
-    setApply(true);
+        setApply(true);
+    if(e?.target?.innerText === 'Apply to drive'){
+      setType('driver');
+      setFormType('driver')
+    }
+    if(e?.target?.innerText === 'Sign up to ride'){
+      setType('rider');
+      setFormType('rider')
+    }
     setTimeout(() => {
       applyRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
   };
-  useEffect(() => {
-    hash.get("form") === "1" ? setApply(true) : setApply(false);
+  useEffect(() => {    
+    if(hash.get("form") === "1"){
+      setApply(true);
+      setType('driver');
+    }
+    if(hash.get("form") === "2"){
+      setApply(true);
+      setType('rider');
+    }
     setTimeout(() => {
-      hash.get("form") === "1"
+      hash.get("form") === "1" || hash.get("form") === "2"
         ? applyRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
-        : "";
+        : "";  
     }, 100);
   }, [hash]);
   useEffect(()=>{   
-    formActiveTerm === true ?   setApply(formActiveTerm) : ''
+    formActiveTerm === true ?   getApply() : ''
     formActive === true && formActiveTerm === true ?   setFormActive(false) : ''
   },[formActiveTerm])
   useEffect(()=>{   
-    formActive === true ?   setApply(formActive) : ''   
+    formActive === true ?   getApply() : ''   
     formActiveTerm === true && formActive === true  ?   setFormActiveTerm(false) : ''   
   },[formActive])
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden" id="banner">
         <div data-aos="zoom-out" data-aos-duration="800">
           <Element tag="section" className="relative w-full overflow-hidden bg-c-green-100 py-8">
             <Container>
               <ImageText
                 heading="Empower Your Journey, Your Way"
                 image={Banner}
-                imagePostion="left"
+                imagePostion="right"
               >
                 <Text>
                   At Ruvo, we're driven by the belief that better choices lead to better lives.
@@ -78,7 +94,7 @@ const HomePageContent = () => {
                     additionalCss="max-sm:!px-0"
                     btnType="outlined"
                     type="button"
-                    label=" Sign up to ride"
+                    label="Sign up to ride"
                   />
                 </Wrapper>
               </ImageText>
@@ -88,7 +104,7 @@ const HomePageContent = () => {
       </div>
       {apply && (
         <div ref={applyRef}>
-          <ApplyForm />
+          <ApplyForm setApply={setApply} type={type}/>
         </div>
       )}
 
@@ -113,7 +129,7 @@ const HomePageContent = () => {
             additionalCss="max-sm:!px-0 "
             btnType="outlined"
             type="button"
-            label="  Sign up to ride"
+            label="Sign up to ride"
           />
         </Wrapper>
       </Wrapper>

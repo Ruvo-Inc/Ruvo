@@ -4,6 +4,7 @@ import Text from "@/app/components/UI/Text/Text";
 import ContactForm from "@/app/components/Form/ContactForm/ContactForm";
 import Container from "@/app/components/UI/Container/Container";
 import { MultiColumnCard } from "../why-ride-with-ruvo/page";
+import NavButton from "@/app/components/UI/NavButton/NavButton";
 
 export const metadata = {
   title: "Investor Information",
@@ -103,35 +104,15 @@ export default function InvestorInformation() {
       in Ruvo, you will fuel innovation in a company that prioritizes the planet
       and its people. Together, we can steer towards a cleaner, greener future.
     </Text>
-  </Wrapper>
-
-  <Wrapper
-    data-aos="fade-up"
-    data-aos-duration="1500"
-    data-aos-delay="300"
-    className=" py-8 "
-  >
-    <Container>
-      <Wrapper className="flex border border-c-gray-400 rounded-[15px] relative max-smlg:flex-col bg-white">
-        <Wrapper className="flex-1 flex justify-center  p-[21px] items-center">
-          <Wrapper>
-            <Heading headingStyle="h2Class" className="!text-[24px]">
-              Connect with Us
-            </Heading>
-            <Text className="max-w-[617px] mt-[10px]">
-              {" "}
-              Please reach out through the contact form below or direct your
-              inquiries to investor.relations@myruvo.com.
-            </Text>
-          </Wrapper>
-        </Wrapper>
-        <Wrapper className="max-w-3xl w-full flex items-center justify-center">
-          <Wrapper className="xl:px-[56px] xl:py-[57px] p-[30px] w-full max-sm:p-[20px]">
-            <ContactForm />
-          </Wrapper>
-        </Wrapper>
-      </Wrapper>
-    </Container>
+    <Wrapper className="max-w-[220px] mx-auto flex gap-x-[25px] mt-4">
+      <NavButton
+        link="mailto:investor.relations@myruvo.com"
+        color="orange"
+        type="solid"
+      >
+        Contact us
+      </NavButton>
+    </Wrapper>
   </Wrapper>
 </>
   );

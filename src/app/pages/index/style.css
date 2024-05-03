@@ -1,3 +1,22 @@
 .the-gradient{
 background: linear-gradient(180deg, #FFFFFF 0%, #E6F8C4 100%);
 }
+.how-ruvo-works{
+    position: relative;
+    z-index: 1;
+}
+.how-ruvo-works::before{
+    content: '';
+position: absolute;
+top: 0;
+left: 50%;
+width: 100%;
+height: 100%;
+max-width: 1408px;
+z-index: -1;
+transform: translateX(-50%);
+background-repeat: no-repeat;
+background-position: center;
+    background-image: url(../../assets//images//Home/bg.png);
+    opacity: 0.15;
+}
