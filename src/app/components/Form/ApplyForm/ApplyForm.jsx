@@ -298,7 +298,7 @@ const ApplyForm = ({ setApply, type }) => {
               <Wrapper>
                 <ReCAPTCHA
                   size="normal"
-                  sitekey='6Ler9s4pAAAAAIEHFDSmgWfnzDi48XAK4gl2azcL'
+                  sitekey={process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_KEY}
                   onChange={onCaptchaChange}
                   ref={recaptcha}
                 />

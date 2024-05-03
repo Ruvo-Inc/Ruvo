@@ -28,12 +28,12 @@ const Footer = () => {
         <Logo mode="light" />
         </Wrapper>
         <Wrapper className="flex gap-x-[15px] mt-5 max-sm:mt-4">
-            <a href="/" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=61558694012933" target="_blank">
               <div className="border border-solid border-white rounded-3xl hover:bg-[white]  hover:text-[green]  hover:scale-125 hover:delay-150 transition-all duration-300 2xl:p-[13px] p-[11px] text-[white] ">
                 <FaFacebookF />
               </div>
             </a>
-            <a href="/" target="_blank">
+            <a href="https://www.instagram.com/ruvo_usa/" target="_blank">
               <div className="border border-solid border-white rounded-3xl hover:bg-[white]  hover:text-[green]  hover:scale-125 hover:delay-150 transition-all duration-300     2xl:p-[13px] p-[11px] text-[white] ">
                 <PiInstagramLogo />
               </div>
@@ -44,12 +44,12 @@ const Footer = () => {
                 <AiFillYoutube />
               </div>
             </a>
-            <a href="/" target="_blank">
+            <a href="https://www.linkedin.com/company/ruvo-com/" target="_blank">
               <div className="border border-solid border-white rounded-3xl  hover:bg-[white]  hover:text-[green]  hover:scale-125 hover:delay-150 ttransition-all duration-300   2xl:p-[13px] p-[11px] text-[white] ">
                 <FaLinkedinIn />
               </div>
             </a>
-            <a href="/" target="_blank">
+            <a href="https://twitter.com/Ruvo_X" target="_blank">
               <div className="border border-solid border-white rounded-3xl hover:bg-[white]  hover:text-[green]  hover:scale-125 hover:delay-150 transition-all duration-300 2xl:p-[13px] p-[11px] text-[white] ">
                 <FaXTwitter />
               </div>

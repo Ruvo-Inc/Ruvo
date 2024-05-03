@@ -90,7 +90,7 @@ function AboutUs() {
           <Wrapper className=" w-full  the-text-animation ">
             <Heading headingStyle="h2Class" className='!text-[24px]'>Mission & Vision</Heading>
             <Text className="mt-[10px] text-[18px] text-c-gray-500 !font-black mb-3">
-              Energizing rvery move: Ruvo's commitment to tomorrow's transport
+              Energizing every move: Ruvo's commitment to tomorrow's transport
             </Text>
             <Text className="text-c-gray-600  text-[16px] leading-[1.5] ">
               <Heading headingStyle="span">

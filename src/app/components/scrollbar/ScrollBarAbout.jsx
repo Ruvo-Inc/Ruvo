@@ -5,7 +5,7 @@ function ScrollBarAbout() {
         <div className='w-full lg:flex h-[843px] grid'>
             <div className='w-[50%]   p-[123px] h-[400px]'>
                 <h2 className='font-semibold   text-[64px]'>Mission & Vision</h2>
-                <p>Energizing Every Move: Ruvo&apos;s Commitm</p>
+                <p>Energizing every move: Ruvo&apos;s Commitm</p>
             </div>
             <div className=' w-[50%] p-12 overflow-auto'>
                 <div className='container'>
