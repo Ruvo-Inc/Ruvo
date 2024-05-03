@@ -8,7 +8,6 @@ import ImageWithText from "@/app/components/UI/ImageWithText/ImageWithText";
 import ImageGirl from "../../assets/images/image-girl.png";
 import WhyRuvo from "@/app/components/Sections/Home/WhyRuvo";
 import HowRuvoWorks from "@/app/components/Sections/Home/HowRuvoWorks";
-import mobileBanner from '../../assets/images/Home/mobile-banner.png'
 import Image from 'next/image';
 function page() {
   return (
