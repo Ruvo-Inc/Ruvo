@@ -57,7 +57,6 @@ export const footerMenu1 = [
   }        
 ];
 
-
 export const footerMenu2 = [  
   
   {
@@ -82,17 +81,12 @@ export const footerMenu2 = [
 }              
 ];
 
-
-
-
-
 export const footerMenu3 = [  
     {
       link: "/link",
     }
    
 ];
-
 
 export const HomeItems = [
   {
@@ -120,8 +114,6 @@ export const HomeItems = [
     description: 'We believe fairness fuels trust, and trust propels us forward. Ruvo stands for equitable treatment of all individuals, regardless of their background. We offer competitive pricing for riders, and for drivers, we promise a transparent earning model with zero hidden fees — because fairness isn’t just good ethics, it’s good business.'
   }
 ]
-
-
 
 export const ValuesCulture = [
   {
@@ -190,9 +182,6 @@ export const Sustainab = [
     text: "The journey to sustainability is ongoing, and Ruvo is committed to leading the charge. With every innovation, partnership, and community initiative, we're not just envisioning a greener future; we're actively creating it. Our mission drives us to explore new frontiers in sustainable mobility, ensuring that Ruvo remains synonymous with eco-friendly, efficient, and accessible urban transportation."
   }
 ]
-
-
-
 
 export const whyRide = [
   {
@@ -264,10 +253,5 @@ export const whyDrive = [
   }
 ]
 
- 
-
-
-
-
-
+export const USAState = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
 

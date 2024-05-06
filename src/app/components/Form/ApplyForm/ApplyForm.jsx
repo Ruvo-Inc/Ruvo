@@ -13,6 +13,8 @@ import Notification from "../../UI/notification/success/Notification";
 import { useThemeConfig } from "@/app/contexts/ThemeConfig/ThemeConfig";
 import { useRouter } from "next/navigation";
 import LoaderNotification from "../../UI/notification/loader/LoaderNotification";
+import DropDown from "../DropDown/select";
+import { USAState } from "@/app/data/Menu";
 const ApplyForm = ({ setApply, type }) => {
   const date = new Date();
   const [formData, setFormData] = useState({
@@ -223,15 +225,18 @@ const ApplyForm = ({ setApply, type }) => {
               </Wrapper>
               <Wrapper className="flex gap-[20px]  w-full  max-sm:flex-col">
                 <Wrapper className="flex-1">
-                  <Input
-                    name="state"
+                     <DropDown  
+                     name="state"
                     label="State"
-                    placeholder="State"
+                    items={USAState}
                     required={true}
                     setData={handleChange}
                     value={formData?.state}
-                    type="text"
-                  />
+                    placeholder="Select State"
+                    
+                    type="text">
+
+                  </DropDown>
                   {formError?.state && !formData?.state && (
                     <Text className="text-sm text-red-500 mt-1">
                       {formError?.state}
@@ -264,13 +269,14 @@ const ApplyForm = ({ setApply, type }) => {
                   required={true}
                 >
                   I have read and agree to the{" "}
-                  <Link href="/pages/legal#privacy-policy" onClick={setForm}>
+                  <Link href="/pages/legal#privacy-policy" onClick={setForm} className="text-blue-700 underline">
                     Privacy Policy
                   </Link>{" "}
                   and{" "}
                   <Link
                     href="/pages/legal#terms-conditions"
                     onClick={setFormTerm}
+                    className="text-blue-700 underline"
                   >
                     Terms of Service
                   </Link>
