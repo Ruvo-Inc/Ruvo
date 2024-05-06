@@ -291,7 +291,7 @@ export function CardBothSide({ postion, index, heading, text, type, text1, headi
                     `${type === "rider" ? " bg-black" : ""} ${
                       type === "driver" ? " bg-black" : ""
                     }  ${type === "blank" ? " bg-black " : ""}` +
-                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                    "text-white max-md:mx-auto rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
                   }
                 >
                   {type}
@@ -328,7 +328,7 @@ export function CardBothSide({ postion, index, heading, text, type, text1, headi
             </Wrapper>
           </Wrapper>
             <Wrapper className="flex-1  min-h-[98px]">
-            <Wrapper className="flex-1 relative pt-[10px]">
+            <Wrapper className="flex-1 relative pt-[10px] text-center">
             {type !== "both" && type !== "blank" && (
                 <Heading
                   headingStyle="empty"
@@ -336,7 +336,7 @@ export function CardBothSide({ postion, index, heading, text, type, text1, headi
                     `${type === "rider" ? " bg-black" : ""} ${
                       type === "driver" ? " bg-black" : ""
                     }  ${type === "blank" ? " bg-black " : ""}` +
-                    "text-white rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
+                    "text-white max-md:mx-auto rounded-[5px] py-[5px] px-[18px] inline-block text-[14px]  font-bold font-mulish capitalize"
                   }
                 >
                   {type}
