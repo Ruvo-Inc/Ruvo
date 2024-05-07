@@ -328,7 +328,7 @@ export function CardBothSide({ postion, index, heading, text, type, text1, headi
             </Wrapper>
           </Wrapper>
             <Wrapper className="flex-1  min-h-[98px]">
-            <Wrapper className="flex-1 relative pt-[10px] text-center">
+            <Wrapper className="flex-1 relative pt-[10px] text-left max-md:text-center">
             {type !== "both" && type !== "blank" && (
                 <Heading
                   headingStyle="empty"
