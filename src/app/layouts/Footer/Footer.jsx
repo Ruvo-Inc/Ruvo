@@ -81,7 +81,7 @@ const Footer = () => {
           ></Heading>
           <Navigation linkList={footerMenu3} />
           <NavButton
-            link="mailto:email@ruvo.com"
+            link="mailto:info@myruvo.com"
             type="nav"
             additionalCss="flex items-center font-mulish gap-[10px] text-white font-poppins"
           >
