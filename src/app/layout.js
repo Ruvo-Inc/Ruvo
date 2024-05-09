@@ -12,6 +12,12 @@ export const metadata = {
   title: "Ruvo - Home",
   description: "DRIVE CHANGE, RIDE GREEN",
   verification: { google: "-U2s6Kf1Kj_0bM2QHU4x6NEypkj-a8YdPjOZGGLjbtU" },
+  robots: {
+    index: true,
+    googleBot: {
+      index: true,
+    }
+  },
 };
 
 export default function RootLayout({ children }) {
